@@ -77,23 +77,69 @@
                     <div class="row mt-3">
                         <div class="col-md-6">
                             <ul>
-                                <li><strong>Name:</strong> Huzaifa Zahoor</li>
-                                <li><strong>Location:</strong> Islamabad, Pakistan</li>
-                                <li><strong>Email: </strong> huzaifazahoor654@gmail.com</li>
+                                <li>
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    Huzaifa Zahoor
+                                </li>
+                                <li>
+                                    <i class="fa fa-globe" aria-hidden="true"></i>
+                                    Islamabad, Pakistan
+                                </li>
+                                <li>
+                                    <a href="mailto:huzaifazahoor654@gmail.com" target="_blank">
+                                        <i class="fa fa-envelope" style="color:black" aria-hidden="true"></i>
+                                    </a>
+                                    huzaifazahoor654@gmail.com
+                                </li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <ul>
-                                <li><strong>Phone:</strong> +92 332 575 8954</li>
                                 <li>
-                                    <strong>Availability:</strong> 5:00 AM - 5:00 PM (UTC)
+                                    <a href="https://wa.me/+923325758954" target="_blank">
+                                        <i class="fab fa-whatsapp" style="color:black" aria-hidden="true"></i>
+                                    </a>
+                                    +923325758954
+                                </li>
+                                <li>
+                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                    5:00 AM - 5:00 PM (UTC)
                                 </li>
                             </ul>
                         </div>
+                        <div class="col-md-12 mt-4">
+                            <h2>
+                                Explore My Online Presence
+                            </h2>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <a href="https://medium.com/@huzaifazahoor654" target="_blank">
+                                <i class="fab fa-medium fa-3x"></i>
+                            </a>
+                            <p>Thoughts and Insights on Medium</p>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <a href="https://www.linkedin.com/in/huzaifazahoor654" target="_blank">
+                                <i class="fab fa-linkedin fa-3x"></i>
+                            </a>
+                            <p>Connect with Me on LinkedIn</p>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <a href="https://github.com/huzaifazahoor" target="_blank">
+                                <i class="fab fa-github fa-3x"></i>
+                            </a>
+                            <p>Explore My Code on GitHub</p>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <a href="https://stackoverflow.com/users/7136640/huzaifa-zahoor" target="_blank">
+                                <i class="fab fa-stack-overflow fa-3x"></i>
+                            </a>
+                            <p>Find Answers on Stack Overflow</p>
+                        </div>
                     </div>
+
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- services section-->
@@ -197,9 +243,6 @@
                             <p class="card-text">
                                 A chatbot for real-time stock market updates and analysis.
                             </p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -214,9 +257,6 @@
                                 An ETL pipeline for extracting, transforming, and loading data
                                 from various sources.
                             </p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -231,9 +271,6 @@
                                 A bot for transcribing video courses into text for easy access
                                 to educational content.
                             </p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -250,9 +287,6 @@
                                 A stock screener with enhanced Django backend and cloud
                                 infrastructure.
                             </p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -267,9 +301,6 @@
                                 An analytics dashboard for real-time tracking and analysis using
                                 Python and Google Analytics API.
                             </p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -284,9 +315,6 @@
                                 Automated generation of stock market articles using web scraping
                                 and automation techniques.
                             </p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -300,8 +328,7 @@
 
             <div class="row mt-4">
                 <div class="col-lg-6">
-                    <div style="
-                overflow: hidden;
+                    <div style="overflow: hidden;
                 resize: none;
                 max-width: 100%;
                 width: 500px;
@@ -326,15 +353,23 @@
                 <div class="col-lg-6">
                     <!-- form fields -->
                     <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                        <input type="text" class="form-control form-control-lg" name="username" placeholder="Name" />
-                        <input type="email" class="form-control mt-3" name="email" placeholder="Email" />
-                        <input type="text" class="form-control mt-3" name="subject" placeholder="Subject" />
+                        <input type="text" class="form-control form-control-lg" name="username" placeholder="Name"
+                            disabled />
+                        <input type="email" class="form-control mt-3" name="email" placeholder="Email" disabled />
+                        <input type="text" class="form-control mt-3" name="subject" placeholder="Subject" disabled />
                         <div class="mb-3 mt-3">
-                            <textarea class="form-control" rows="5" id="comment" name="text"
-                                placeholder="Message"></textarea>
+                            <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Message"
+                                disabled></textarea>
                         </div>
-                        <button type="submit" class="btn btn-success mt-3">Contact Me</button>
+                        <a href="https://wa.me/+923325758954" class="btn btn-success mt-3" disabled>
+                            Contact Me
+                        </a>
                     </form>
+                    <!-- alert message -->
+                    <div class="alert alert-info mt-3">
+                        This feature is currently not working. Please email me directly at
+                        huzaifazahoor654@gmail.com.
+                    </div>
                 </div>
             </div>
         </div>
