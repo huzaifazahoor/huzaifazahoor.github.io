@@ -2,222 +2,84 @@
 <html lang="en">
 
 <head>
-    <title>Huzaifa Zahoor - Software & Data Engineer</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- linking css file -->
-    <link rel="stylesheet" href="style.css" />
-    <!-- bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huzaifa Zahoor - Software (Data) Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3498db',
+                        secondary: '#2c3e50',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
-        <div class="container">
-            <a class="navbar-brand" href="#">Huzaifa Zahoor</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+<body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-secondary text-white p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Huzaifa Zahoor</a>
+            <div class="hidden md:flex space-x-4">
+                <a href="#home" class="hover:text-primary transition">Home</a>
+                <a href="#about" class="hover:text-primary transition">About</a>
+                <a href="#services" class="hover:text-primary transition">Services</a>
+                <a href="#portfolio" class="hover:text-primary transition">Portfolio</a>
+                <a href="#experience" class="hover:text-primary transition">Experience</a>
+                <a href="#skills" class="hover:text-primary transition">Skills</a>
+                <a href="#contact" class="hover:text-primary transition">Contact</a>
             </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
-    <!-- main banner -->
-    <section class="bgimage" id="home">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
-                    <h2 class="hero_title">Hi, I'm Huzaifa Zahoor</h2>
-                    <p class="hero_desc">I am a Software & Data Engineer</p>
-                </div>
-            </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-primary text-white py-20">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Huzaifa Zahoor</h1>
+            <p class="text-xl md:text-2xl mb-8">Software (Data) Engineer | Stock Market Developer</p>
+            <a href="#contact"
+                class="bg-white text-primary font-bold py-2 px-6 rounded-full hover:bg-gray-200 transition">Get in
+                Touch</a>
         </div>
     </section>
 
-    <!-- about section-->
-    <section id="about">
-        <div class="container mt-4 pt-4">
-            <h1 class="text-center">About Me</h1>
-            <div class="row mt-4">
-                <div class="col-lg-4">
-                    <img src="images/profile.png" class="imageAboutPage" alt="" />
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0">
+                    <img src="images/profile.png" alt="Huzaifa Zahoor"
+                        class="rounded-full w-64 h-64 object-cover mx-auto">
                 </div>
-                <div class="col-lg-8">
-                    <p>I am a Software & Data Engineer and the founder of <a class="text-dark" href="https://meyka.com/">Meyka</a>, an AI-powered stock research assistant that helps investors make informed decisions. With a strong background in Python, cloud technologies, and data engineering, I have led the development of innovative financial tools and solutions. My expertise includes building data pipelines, optimizing processes, and developing web applications using frameworks like Django and React. Through Meyka, I aim to revolutionize the way investors interact with stock market data, providing real-time analysis and insights.</p>
-                    <div class="row mt-3">
-                        <div class="col-md-6">
-                            <ul>
-                                <li>
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                    Huzaifa Zahoor
-                                </li>
-                                <li>
-                                    <i class="fa fa-globe" aria-hidden="true"></i>
-                                    Islamabad, Pakistan
-                                </li>
-                                <li>
-                                    <a href="mailto:huzaifazahoor654@gmail.com" target="_blank" class="text-dark" style="text-decoration: none;">
-                                        <i class="fa fa-envelope" style="color:black" aria-hidden="true"></i>
-                                        huzaifazahoor654@gmail.com
-                                    </a>
-                                </li>
-                            </ul>
+                <div class="md:w-2/3 md:pl-12">
+                    <p class="text-lg mb-6">I am a Software & Data Engineer specializing in FinTech solutions. As the
+                        founder of <a href="https://meyka.com/" class="text-primary hover:underline">Meyka</a>, an
+                        AI-powered stock research assistant, I'm passionate about leveraging technology to empower
+                        investors. With expertise in Python, cloud technologies, and data engineering, I develop
+                        innovative financial tools and platforms that provide real-time market insights and analysis.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <p><i class="fas fa-user mr-2 text-primary"></i> Huzaifa Zahoor</p>
+                            <p><i class="fas fa-globe mr-2 text-primary"></i> Islamabad, Pakistan</p>
+                            <p><i class="fas fa-envelope mr-2 text-primary"></i> <a
+                                    href="mailto:huzaifazahoor654@gmail.com"
+                                    class="hover:underline">huzaifazahoor654@gmail.com</a></p>
                         </div>
-                        <div class="col-md-6">
-                            <ul>
-                                <li>
-                                    <a href="https://wa.me/+923325758954" target="_blank" class="text-dark" style="text-decoration: none;">
-                                        <i class="fab fa-whatsapp" style="color:black" aria-hidden="true"></i>
-                                        +923325758954
-                                    </a>
-                                </li>
-                                <li>
-                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                    5:00 AM - 5:00 PM (UTC)
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-12 mt-4">
-                            <h2>Explore My Online Presence</h2>
-                        </div>
-                        <div class="col-md-3 text-center">
-                            <a href="https://medium.com/@huzaifazahoor654" target="_blank">
-                                <i class="fab fa-medium fa-3x"></i>
-                            </a>
-                            <p>Thoughts and Insights on Medium</p>
-                        </div>
-                        <div class="col-md-3 text-center">
-                            <a href="https://www.linkedin.com/in/huzaifazahoor" target="_blank">
-                                <i class="fab fa-linkedin fa-3x"></i>
-                            </a>
-                            <p>Connect with Me on LinkedIn</p>
-                        </div>
-                        <div class="col-md-3 text-center">
-                            <a href="https://github.com/huzaifazahoor" target="_blank">
-                                <i class="fab fa-github fa-3x"></i>
-                            </a>
-                            <p>Explore My Code on GitHub</p>
-                        </div>
-                        <div class="col-md-3 text-center">
-                            <a href="https://stackoverflow.com/users/7136640/huzaifa-zahoor" target="_blank">
-                                <i class="fab fa-stack-overflow fa-3x"></i>
-                            </a>
-                            <p>Find Answers on Stack Overflow</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <!-- services section-->
-    <section id="services">
-        <div class="container">
-            <h1 class="text-center">Services</h1>
-            <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="card servicesText">
-                        <div class="card-body">
-                            <i class="fas servicesIcon fa-code"></i>
-                            <h4 class="card-title mt-3">Software Development</h4>
-                            <p class="card-text mt-3">
-                                I specialize in building robust and efficient software
-                                applications using Python and other technologies.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="card servicesText">
-                        <div class="card-body">
-                            <i class="fas servicesIcon fa-database"></i>
-                            <h4 class="card-title mt-3">Data Engineering</h4>
-                            <p class="card-text mt-3">
-                                I can create data pipelines and ETL processes to extract,
-                                transform, and load data for analysis.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="card servicesText">
-                        <div class="card-body">
-                            <i class="fas servicesIcon fa-cloud"></i>
-                            <h4 class="card-title mt-3">Cloud Expertise</h4>
-                            <p class="card-text mt-3">
-                                I have experience with cloud platforms like GCP, AWS, and
-                                Azure for scalable and reliable solutions.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="card servicesText">
-                        <div class="card-body">
-                            <i class="fas servicesIcon fa-robot"></i>
-                            <h4 class="card-title mt-3">Chatbot Development</h4>
-                            <p class="card-text mt-3">
-                                I can create chatbots for real-time communication and
-                                assistance using the latest AI technologies.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="card servicesText">
-                        <div class="card-body">
-                            <i class="fas servicesIcon fa-cogs"></i>
-                            <h4 class="card-title mt-3">Automation</h4>
-                            <p class="card-text mt-3">
-                                I implement automation techniques to streamline processes and
-                                improve efficiency.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="card servicesText">
-                        <div class="card-body">
-                            <i class="fas servicesIcon fa-chart-bar"></i>
-                            <h4 class="card-title mt-3">Data Analysis</h4>
-                            <p class="card-text mt-3">
-                                I provide insights through data analysis and visualization to
-                                support informed decision-making.
-                            </p>
+                        <div>
+                            <p><i class="fab fa-whatsapp mr-2 text-primary"></i> <a href="https://wa.me/923325758954"
+                                    class="hover:underline">+923325758954</a></p>
+                            <p><i class="fas fa-clock mr-2 text-primary"></i> 5:00 AM - 5:00 PM (UTC)</p>
                         </div>
                     </div>
                 </div>
@@ -225,239 +87,316 @@
         </div>
     </section>
 
-    <!-- experience section-->
-    <section id="experience">
-        <div class="container mt-3">
-            <h1 class="text-center">Professional Experience</h1>
-            <div class="row">
-                <div class="col-lg-12 mt-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Technical Co-Founder, Meyka PTY LTD (Remote)</h4>
-                            <h6 class="card-subtitle mb-2 text-muted">Sept 2023 - Present</h6>
-                            <ul>
-                                <li>Founded and built an AI-powered stock research chatbot using ChatGPT API for major international markets.</li>
-                                <li>Led a team of 8 people, including developers and marketers.</li>
-                                <li>Managed cloud services on GCP with 0% downtime with cost-effective solutions.</li>
-                                <li>Built the entire backend and trained ChatGPT to specialize in finance.</li>
-                                <li>Created useful tools like a stock screener and stock price forecasting for 2000 monthly traffic.</li>
-                                <li>Focused on accuracy and performance based on user feedback.</li>
-                                <li>Planned new features to keep users engaged and satisfied.</li>
-                            </ul>
-                        </div>
+    <!-- Services Section -->
+    <section id="services" class="bg-gray-200 py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <i class="fas fa-code text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">FinTech Development</h3>
+                    <p>Building robust and efficient financial software applications using Python and other cutting-edge
+                        technologies.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <i class="fas fa-database text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Data Engineering</h3>
+                    <p>Creating data pipelines and ETL processes to extract, transform, and analyze data.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <i class="fas fa-robot text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">AI-Powered Financial Tools</h3>
+                    <p>Developing intelligent chatbots and analysis tools for real-time financial insights and
+                        decision-making.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="images/about_meyka.jpg" alt="Meyka" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Meyka - AI Stock Research Chatbot</h3>
+                        <p class="mb-4">An AI-powered stock research assistant that helps investors make informed
+                            decisions in major international markets.</p>
+                        <a href="https://meyka.com/" target="_blank" class="text-primary hover:underline">View
+                            Project</a>
                     </div>
                 </div>
-                <div class="col-lg-12 mt-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Software & Data Engineer (Freelance, Remote)</h4>
-                            <h6 class="card-subtitle mb-2 text-muted">Feb 2021 - Present</h6>
-                            <ul>
-                                <li>Developed a real-time stock market WhatsApp chatbot for the Saudi Exchange using OpenAI's GPT API with 100% uptime on the cloud.</li>
-                                <li>Architected a scalable data pipeline on AWS Glue with Python.</li>
-                                <li>Automated transcription of 5TB of video courses into text using Deepgram API and uploading transcripts into Google Sheets.</li>
-                                <li>Created web scraping solutions for clients, using ETL pipelines to transform and store data in various formats.</li>
-                                <li>Designed and implemented stock and crypto screeners with advanced analysis and forecasting.</li>
-                            </ul>
-                        </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="images/salaryScout.png" alt="SalaryScout" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">SalaryScout</h3>
+                        <p class="mb-4">A salary research tool that collects and analyzes developer salaries, providing
+                            insights on average, maximum, and minimum salaries in the tech industry.</p>
+                        <a href="#" class="text-primary hover:underline">View Project</a>
                     </div>
                 </div>
-                <div class="col-lg-12 mt-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Senior Software and Data Engineer, MLSense Solutions (Islamabad, Pakistan)</h4>
-                            <h6 class="card-subtitle mb-2 text-muted">Dec 2022 - Dec 2023</h6>
-                            <ul>
-                                <li>Streamlined data flow from various sources to Data Warehouses and Data Lakes, improving data accuracy by 95% using Python and Apache Airflow, as well as ETL tools.</li>
-                                <li>Led the development and execution of a job analytics platform, coordinating the team to scrape job listings and visualize insights through a user-friendly dashboard.</li>
-                                <li>Implemented Test-Driven Development (TDD) with code coverage over 90%+.</li>
-                                <li>Hired and trained 10+ software engineers improving team effectiveness.</li>
-                            </ul>
-                        </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="images/nepse-research.png" alt="NEPSE Research" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">NEPSE Research</h3>
+                        <p class="mb-4">A comprehensive tool for the Nepal stock market featuring a stock screener,
+                            candlestick pattern analysis, and chart pattern detection.</p>
+                        <a href="https://nepse-research.com" target="_blank" class="text-primary hover:underline">View
+                            Project</a>
                     </div>
                 </div>
-                <div class="col-lg-12 mt-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Technical Team Lead, Million News Media (PVT) Ltd. (Islamabad, Pakistan)</h4>
-                            <h6 class="card-subtitle mb-2 text-muted">Dec 2021 - Jun 2023</h6>
-                            <ul>
-                                <li>Managed a team of 5 developers and improved efficiency by 30%.</li>
-                                <li>Conducted 50+ interviews, achieving a 70% hiring success rate for backend roles.</li>
-                                <li>Adopted new technologies, reducing cloud costs by 50% and increasing uptime to 100%.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12 mt-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Backend Python Developer, Million News Media (PVT) Ltd. (Islamabad, Pakistan)</h4>
-                            <h6 class="card-subtitle mb-2 text-muted">Sep 2020 - Dec 2021</h6>
-                            <ul>
-                                <li>Developed a Django-based stock screener, enabling real-time market data insights for investors.</li>
-                                <li>Explored and deployed the stock screener on AWS and Digital Ocean and adopted new technologies.</li>
-                                <li>Recommended new technologies to enhance product performance, driving continuous improvement.</li>
-                                <li>Developed automation tools for financial writers and management in Python.</li>
-                            </ul>
-                        </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="images/bravo-scan.png" alt="Bravo Scan" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Bravo Scan</h3>
+                        <p class="mb-4">A US market analysis tool offering technical indicators, stock screening, and
+                            advanced market insights.</p>
+                        <a href="https://bravo-scan.com" target="_blank" class="text-primary hover:underline">View
+                            Project</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- skills section-->
-    <section id="skills">
-        <div class="container mt-3">
-            <h1 class="text-center">Technical Skills</h1>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul>
-                        <li><strong>Languages & Frameworks:</strong> Python, Django, Django REST Framework, React JS, Langchain, Flask, Bootstrap</li>
-                        <li><strong>Cloud (AWS & GCP):</strong> Serverless Systems, Servers, Databases, Storage, Functions & Services</li>
-                        <li><strong>Data Engineering:</strong> Apache Airflow, ETL Pipelines, Kafka, Apache Spark, Snowflake, Localstack, Fivetran ETL, Qlikview Replicate, Databricks, Data Warehouses, Data Lakes</li>
-                        <li><strong>Testing and Deployments:</strong> Unit Testing, Integration Testing, Test Driven Development (TDD), Github Actions</li>
-                        <li><strong>AI:</strong> Open AI, Gemini, Claude, NLP, Spacy</li>
-                        <li><strong>Others:</strong> Git & GitHub, Web Scrapping & Automation</li>
+    <!-- Experience Section -->
+    <!-- Experience Section -->
+    <section id="experience" class="bg-gray-200 py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Professional Experience</h2>
+            <div class="space-y-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Technical Co-Founder, MEYKA PTY LTD</h3>
+                    <p class="text-gray-600 mb-4">October 2023 - Present</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Founded and built an AI-powered stock research chatbot using ChatGPT API for major
+                            international markets.</li>
+                        <li>Led a team of 8 people, including developers and marketers.</li>
+                        <li>Managed cloud services on GCP with 0% downtime with cost-effective solutions.</li>
+                        <li>Built the entire backend and trained ChatGPT to specialize in finance.</li>
+                        <li>Created useful tools like a stock screener and stock price forecasting for 2000 monthly
+                            traffic.</li>
+                        <li>Focused on accuracy and performance based on using user feedback.</li>
+                        <li>Planned new features to keep users engaged and satisfied.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Freelance Software & Data Engineer</h3>
+                    <p class="text-gray-600 mb-4">February 2021 - Present</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Developed a real-time stock market WhatsApp chatbot for the Saudi Exchange using OpenAI's
+                            GPT API with 100% uptime on the cloud.</li>
+                        <li>Architected a scalable data pipeline on AWS Glue with Python.</li>
+                        <li>Automated transcription of 5TB of video courses into text using Deepgram API and uploading
+                            transcripts into Google Sheets.</li>
+                        <li>Created web scraping solutions for clients, using ETL pipelines to transform and store data
+                            in various formats.</li>
+                        <li>Designed and implemented stock and crypto screeners with advanced analysis and forecasting.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Senior Software and Data Engineer, ML Sense Solutions</h3>
+                    <p class="text-gray-600 mb-4">December 2022 - November 2023</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Streamlined data flow from various sources to Data Warehouses and Data Lakes, improving data
+                            accuracy by 95% using Python and Apache Airflow, as well as ETL tools.</li>
+                        <li>As the project manager, I led the development and execution of a job analytics platform,
+                            coordinating the team to scrape job listings and visualize insights through a user-friendly
+                            dashboard.</li>
+                        <li>Implemented Test-Driven Development (TDD) with code coverage over 90%+.</li>
+                        <li>Hired and trained 10+ software engineers improving team effectiveness.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Technical Team Lead, Million News Media (PVT) Ltd.</h3>
+                    <p class="text-gray-600 mb-4">December 2022 - June 2023</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Managed a team of 5 developers and improving efficiency by 30%.</li>
+                        <li>Conducted 50+ interviews, achieving a 70% hiring success rate for backend roles.</li>
+                        <li>Adopted new technologies, reducing cloud costs by 50% and increasing uptime to 100%.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Technical Team Lead, Million News Media (PVT) Ltd.</h3>
+                    <p class="text-gray-600 mb-4">December 2021 - March 2023</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Promoted to Technical Team Lead, managing 3 developers.</li>
+                        <li>Managed backend infrastructure using AWS and reduced downtime by 25%.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Python Developer, Million News Media (PVT) Ltd.</h3>
+                    <p class="text-gray-600 mb-4">September 2020 - December 2021</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Developed a Django-based stock screener, enabling real-time market data insights for
+                            investors.</li>
+                        <li>Explored and deployed the stock screener on AWS and Digital Ocean and adopted new
+                            technologies.</li>
+                        <li>Recommended new technologies to enhance product performance, driving continuous improvement.
+                        </li>
+                        <li>Developed automation tools for financial writers and management in Python.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Frontend Developer, Hi-Data Technologies</h3>
+                    <p class="text-gray-600 mb-4">June 2019 - July 2019</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Excelled in Bootstrap frontend framework, enhancing frontend development capabilities and
+                            delivering intuitive user interfaces.</li>
+                        <li>Leveraged Adobe Photoshop skills to create visually compelling graphics and designs,
+                            showcasing creativity and attention to detail.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- portfolio section-->
-    <section id="portfolio">
-        <div class="container mt-3">
-            <h1 class="text-center">Portfolio</h1>
-            <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="card">
-                        <a href="https://meyka.com/" target="_blank" class="text-dark" style="text-decoration: none;">
-                            <img class="card-img-top" src="images/about_meyka.jpg" alt="Card image" style="width: 100%" />
-                            <div class="card-body">
-                                <h4 class="card-title">Meyka - AI Stock Research Chatbot</h4>
-                                <p class="card-text">An AI-powered stock research assistant that helps investors make informed decisions.</p>
-                            </div>
-                        </a>
-                    </div>
+    <!-- Skills Section -->
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Languages & Frameworks</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Python</li>
+                        <li>Django</li>
+                        <li>Django REST Framework</li>
+                        <li>React JS</li>
+                        <li>Langchain</li>
+                        <li>Flask</li>
+                        <li>Bootstrap</li>
+                    </ul>
                 </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width: 100%" />
-                        <div class="card-body">
-                            <h4 class="card-title">Automated ETL Pipeline</h4>
-                            <p class="card-text">An ETL pipeline for extracting, transforming, and loading data from various sources.</p>
-                        </div>
-                    </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Cloud & DevOps</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>AWS (EC2, Lightsail, Lambda, CloudWatch, RDS, ElasticBeanstalk, Glue, Secret Manager, S3)
+                        </li>
+                        <li>GCP (Compute Engine, App Engine, Cloud Run, Cloud SQL, IAM, Cloud Functions, Cloud Storage,
+                            Cloud Firestore)</li>
+                        <li>Azure (VM, Data Bricks, Blob Storage, Data Factory)</li>
+                        <li>Docker</li>
+                        <li>GitHub Actions</li>
+                    </ul>
                 </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage3.jpg" alt="Card image" style="width: 100%" />
-                        <div class="card-body">
-                            <h4 class="card-title">Video Transcription Bot</h4>
-                            <p class="card-text">A bot for transcribing video courses into text for easy access to educational content.</p>
-                        </div>
-                    </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Data Engineering & Analytics</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Apache Airflow</li>
+                        <li>ETL Pipelines</li>
+                        <li>Kafka</li>
+                        <li>PySpark</li>
+                        <li>Snowflake</li>
+                        <li>Localstack</li>
+                        <li>Fivetran</li>
+                        <li>Data Warehouses</li>
+                        <li>Data Lakes</li>
+                        <li>Data Analysis</li>
+                        <li>Data Modeling</li>
+                        <li>SSIS</li>
+                    </ul>
                 </div>
-            </div>
-            <br />
-            <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width: 100%" />
-                        <div class="card-body">
-                            <h4 class="card-title">Django Stock Screener</h4>
-                            <p class="card-text">A stock screener with enhanced Django backend and cloud infrastructure.</p>
-                        </div>
-                    </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Databases</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>SQL (PostgreSQL, MySQL, MsSQL)</li>
+                        <li>NoSQL (MongoDB)</li>
+                    </ul>
                 </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage1.jpg" alt="Card image" style="width: 100%" />
-                        <div class="card-body">
-                            <h4 class="card-title">Real-time Analytics Dashboard</h4>
-                            <p class="card-text">An analytics dashboard for real-time tracking and analysis using Python and Google Analytics API.</p>
-                        </div>
-                    </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">AI & Machine Learning</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>OpenAI</li>
+                        <li>Gemini</li>
+                        <li>Claude</li>
+                        <li>NLP</li>
+                        <li>Spacy</li>
+                    </ul>
                 </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width: 100%" />
-                        <div class="card-body">
-                            <h4 class="card-title">Automated Stock Market Articles</h4>
-                            <p class="card-text">Automated generation of stock market articles using web scraping and automation techniques.</p>
-                        </div>
-                    </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Testing & Development Practices</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Unit Testing</li>
+                        <li>Integration Testing</li>
+                        <li>Test Driven Development (TDD)</li>
+                        <li>Git & GitHub</li>
+                        <li>Web Scraping & Automation</li>
+                    </ul>
                 </div>
-            </div>
-    </section>
-
-    <!-- contact section-->
-    <section id="contact">
-        <div class="container mt-3 contactContent">
-            <h1 class="text-center">Contact Me</h1>
-
-            <div class="row mt-4">
-                <div class="col-lg-6">
-                    <div style="overflow: hidden; resize: none; max-width: 100%; width: 500px; height: 500px;">
-                        <div id="embed-ded-map-canvas" style="height: 100%; width: 100%; max-width: 100%">
-                            <iframe style="height: 100%; width: 100%; border: 0" frameborder="0"
-                                src="https://www.google.com/maps/embed/v1/place?q=Gulberg+Greens+Islamabad,+Pakistan&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
-                        </div>
-                        <a class="embed-map-html" rel="nofollow" href="https://www.bootstrapskins.com/themes"
-                            id="enable-map-data">premium bootstrap themes</a>
-                        <style>
-                            #embed-ded-map-canvas img {
-                                max-width: none !important;
-                                background: none !important;
-                                font-size: inherit;
-                                font-weight: inherit;
-                            }
-                        </style>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <!-- form fields -->
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                        <input type="text" class="form-control form-control-lg" name="username" placeholder="Name" disabled />
-                        <input type="email" class="form-control mt-3" name="email" placeholder="Email" disabled />
-                        <input type="text" class="form-control mt-3" name="subject" placeholder="Subject" disabled />
-                        <div class="mb-3 mt-3">
-                            <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Message" disabled></textarea>
-                        </div>
-                        <a href="https://wa.me/+923325758954" class="btn btn-success mt-3" disabled>
-                            Contact Me
-                        </a>
-                    </form>
-                    <!-- alert message -->
-                    <div class="alert alert-info mt-3">
-                        This feature is currently not working. Please email me directly at huzaifazahoor654@gmail.com.
-                    </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Soft Skills</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Communication</li>
+                        <li>Teamwork</li>
+                        <li>Problem Solving</li>
+                        <li>Attention to detail</li>
+                        <li>Adaptability</li>
+                        <li>Time Management</li>
+                        <li>Self Motivation</li>
+                        <li>Critical Thinking</li>
+                        <li>Creativity</li>
+                        <li>Interpersonal Skills</li>
+                        <li>Continuous Learning</li>
+                        <li>Conflict Resolution</li>
+                        <li>Performance Optimization</li>
+                        <li>Cost-Effective Solutions</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
-    <!-- footer section-->
-    <footer id="footer">
-        <div class="container-fluid">
-            <!-- social media icons -->
-            <div class="social-icons mt-4">
-                <a href="https://medium.com/@huzaifazahoor654" target="_blank"><i class="fab fa-medium"></i></a>
-                <a href="https://www.linkedin.com/in/huzaifazahoor654" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/huzaifazahoor" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://stackoverflow.com/users/7136640/huzaifa-zahoor" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-secondary text-white py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Contact Me</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
+                <div class="text-center">
+                    <i class="fas fa-envelope text-4xl mb-4"></i>
+                    <p><a href="mailto:huzaifazahoor654@gmail.com"
+                            class="hover:underline">huzaifazahoor654@gmail.com</a></p>
+                </div>
+                <div class="text-center">
+                    <i class="fab fa-whatsapp text-4xl mb-4"></i>
+                    <p><a href="https://wa.me/923325758954" class="hover:underline">+923325758954</a></p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-map-marker-alt text-4xl mb-4"></i>
+                    <p>Islamabad, Pakistan</p>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="https://medium.com/@huzaifazahoor654" target="_blank" class="hover:text-primary transition"><i
+                        class="fab fa-medium text-2xl"></i></a>
+                <a href="https://www.linkedin.com/in/huzaifazahoor" target="_blank"
+                    class="hover:text-primary transition"><i class="fab fa-linkedin text-2xl"></i></a>
+                <a href="https://github.com/huzaifazahoor" target="_blank" class="hover:text-primary transition"><i
+                        class="fab fa-github text-2xl"></i></a>
+                <a href="https://stackoverflow.com/users/7136640/huzaifa-zahoor" target="_blank"
+                    class="hover:text-primary transition"><i class="fab fa-stack-overflow text-2xl"></i></a>
+                <a href="#" target="_blank"
+                    class="hover:text-primary transition"><i class="fab fa-facebook text-2xl"></i></a>
+            </div>
+            <p>&copy; 2024 Huzaifa Zahoor. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- load javascript after loading all html content -->
-    <script src="script/script.js"></script>
 </body>
 
 </html>
