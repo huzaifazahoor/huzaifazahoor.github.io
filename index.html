@@ -21,70 +21,78 @@
             }
         }
     </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-dark text-gray-300 font-sans">
     <div class="flex">
         <!-- Left Sidebar -->
-        <!-- <aside class="w-64 bg-light p-6 h-screen fixed overflow-y-auto"> -->
-        <aside class="fixed top-4 left-4 bottom-4 w-64 bg-gray-800 rounded-lg p-4 overflow-y-auto">
-            <div class="text-center mb-8">
+        <aside
+            class="fixed top-4 left-4 bottom-4 w-64 bg-gray-800 rounded-lg p-4 flex flex-col md:w-64 w-full left-0 top-0 bottom-0 z-50">
+            <div class="flex-shrink-0 text-center mb-4">
                 <img src="images/profile.png" alt="Huzaifa Zahoor"
-                    class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
-                <h1 class="text-2xl font-bold text-white">Huzaifa Zahoor</h1>
-                <p class="text-sm text-gray-400">Software (Data) Engineer</p>
+                    class="rounded-full w-24 h-24 object-cover mx-auto mb-2">
+                <h1 class="text-xl font-bold text-white">Huzaifa Zahoor</h1>
+                <p class="text-xs text-gray-400">Software (Data) Engineer</p>
             </div>
-            <div class="space-y-4">
-                <div class="flex items-center text-sm">
+
+            <div
+                class="bg-light text-white p-3 rounded-lg mb-4 border border-primary hover:border-white transition-all duration-300">
+                <h2 class="font-bold text-sm mb-2">Get a Quote & Discuss about Projects</h2>
+                <a href="https://api.whatsapp.com/send/?phone=923325758954&text=Hey%20Huzaifa.+Can+I+get+more+details.&type=phone_number"
+                    class="flex items-center justify-center bg-primary text-white py-2 px-3 rounded-lg hover:bg-blue-600 transition duration-300 text-sm">
+                    <i class="fab fa-whatsapp mr-2"></i>
+                    <span class="font-semibold">Contact on WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="flex-grow overflow-y-auto space-y-2 text-sm">
+                <div class="flex items-center">
                     <i class="fas fa-envelope mr-2 text-primary"></i>
-                    <a href="mailto:huzaifazahoor654@gmail.com" class="hover:text-primary truncate"
+                    <a href="mailto:huzaifazahoor654@gmail.com" class="hover:text-primary truncate text-white"
                         title="huzaifazahoor654@gmail.com">
                         huzaifazahoor654@gmail.com
                     </a>
                 </div>
-                <div>
-                    <i class="fab fa-whatsapp mr-2 text-primary"></i>
-                    <a href="https://wa.me/923325758954" class="hover:text-primary">+92-332-575-8954</a>
-                </div>
-                <div>
+                <div class="flex items-center text-white">
                     <i class="fas fa-map-marker-alt mr-2 text-primary"></i>
                     <span>Islamabad, Pakistan</span>
                 </div>
-                <div>
+                <div class="flex items-center text-white">
                     <i class="fas fa-clock mr-2 text-primary"></i>
                     <span>5:00 AM - 5:00 PM (UTC)</span>
                 </div>
             </div>
-            <div class="mt-8 space-y-4">
+
+            <div class="flex-shrink-0 space-y-2 mt-4 text-sm">
                 <a href="https://medium.com/@huzaifazahoor654" target="_blank"
-                    class="flex items-center hover:text-primary transition">
+                    class="flex items-center hover:text-primary transition text-white">
                     <i class="fab fa-medium mr-2"></i> Medium
                 </a>
                 <a href="https://www.linkedin.com/in/huzaifazahoor" target="_blank"
-                    class="flex items-center hover:text-primary transition">
+                    class="flex items-center hover:text-primary transition text-white">
                     <i class="fab fa-linkedin mr-2"></i> LinkedIn
                 </a>
                 <a href="https://github.com/huzaifazahoor" target="_blank"
-                    class="flex items-center hover:text-primary transition">
+                    class="flex items-center hover:text-primary transition text-white">
                     <i class="fab fa-github mr-2"></i> GitHub
                 </a>
                 <a href="https://stackoverflow.com/users/7136640/huzaifa-zahoor" target="_blank"
-                    class="flex items-center hover:text-primary transition">
+                    class="flex items-center hover:text-primary transition text-white">
                     <i class="fab fa-stack-overflow mr-2"></i> Stack Overflow
                 </a>
                 <a href="https://facebook.com/huzaifazahoor654" target="_blank"
-                    class="flex items-center hover:text-primary transition">
+                    class="flex items-center hover:text-primary transition text-white">
                     <i class="fab fa-facebook mr-2"></i> Facebook
                 </a>
             </div>
         </aside>
 
         <!-- Main Content -->
-        <!-- <main class="ml-64 flex-1"> -->
-        <main class="ml-72 mt-24 p-4">
+        <main class="ml-0 md:ml-72 mt-0 md:mt-24 p-4">
             <!-- Top Navigation -->
-            <!-- <nav class="bg-light p-4 sticky top-0 z-50"> -->
-            <nav class="fixed top-4 left-72 right-4 h-16 bg-gray-800 rounded-lg px-4 flex items-center justify-end">
+            <nav
+                class="fixed top-0 left-0 right-0 md:top-4 md:left-72 md:right-4 h-16 bg-gray-800 px-4 flex items-center justify-end">
                 <div class="flex justify-end items-center">
                     <div class="space-x-6">
                         <button class="tab-btn active" data-tab="about">About</button>
@@ -93,6 +101,9 @@
                         <button class="tab-btn" data-tab="portfolio">Portfolio</button>
                     </div>
                 </div>
+                <button id="menu-toggle" class="md:hidden text-white">
+                    <i class="fas fa-bars"></i>
+                </button>
             </nav>
 
             <!-- Content Sections -->
@@ -366,6 +377,30 @@
 
                 btn.classList.add('active');
                 document.getElementById(tabId).classList.remove('hidden');
+            });
+        });
+    </script>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.querySelector('aside');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('show');
+        });
+
+        // Hide sidebar when clicking outside of it
+        document.addEventListener('click', (event) => {
+            if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+                sidebar.classList.remove('show');
+            }
+        });
+
+        // Hide sidebar when a tab is clicked on mobile
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (window.innerWidth < 768) {
+                    sidebar.classList.remove('show');
+                }
             });
         });
     </script>
