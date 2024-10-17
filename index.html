@@ -22,15 +22,21 @@
         }
     </script>
     <link rel="stylesheet" href="style.css">
+    <script src="style.js"></script>
+    <script src="popup.js"></script>
 </head>
 
 <body class="bg-dark text-gray-300 font-sans">
     <div class="flex">
         <!-- Left Navbar -->
         <aside
-            class="fixed top-4 left-4 bottom-4 w-64 bg-gray-800 rounded-lg p-4 flex flex-col md:w-64 w-full left-0 top-0 bottom-0 z-50">
+            class="fixed top-0 left-0 w-full md:w-64 bg-gray-800 h-screen overflow-y-auto z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out p-4">
+            <button id="sidebar-close" class="md:hidden absolute top-4 right-4 text-white">
+                <i class="fas fa-times"></i>
+            </button>
+
             <div class="flex-shrink-0 text-center mb-4">
-                <img src="images/profile.png" alt="Huzaifa Zahoor"
+                <img src="images/profile.webp" alt="Huzaifa Zahoor"
                     class="rounded-full w-24 h-24 object-cover mx-auto mb-2">
                 <h1 class="text-xl font-bold text-white">Huzaifa Zahoor</h1>
                 <p class="text-xs text-gray-400">Software (Data) Engineer</p>
@@ -89,21 +95,21 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="ml-0 md:ml-72 mt-0 md:mt-24 p-4">
+        <main class="ml-0 md:ml-72 mt-0 md:mt-24 p-4 transition-all duration-300 ease-in-out">
             <!-- Top Navigation -->
             <nav
                 class="fixed top-0 left-0 right-0 md:top-4 md:left-72 md:right-4 h-16 bg-gray-800 px-4 flex items-center justify-end">
                 <div class="flex justify-end items-center">
-                    <div class="space-x-6">
+                    <div class="space-x-2 md:space-x-6 flex items-center">
                         <button class="tab-btn active" data-tab="about">About</button>
                         <button class="tab-btn" data-tab="skills">Skills</button>
                         <button class="tab-btn" data-tab="experience">Experience</button>
                         <button class="tab-btn" data-tab="portfolio">Portfolio</button>
+                        <button id="menu-toggle" class="md:hidden tab-btn">
+                            <i class="fas fa-bars"></i>
+                        </button>
                     </div>
                 </div>
-                <button id="menu-toggle" class="md:hidden text-white">
-                    <i class="fas fa-bars"></i>
-                </button>
             </nav>
 
             <!-- Content Sections -->
@@ -317,93 +323,19 @@
                 <section id="portfolio" class="tab-content hidden">
                     <h2 class="text-3xl font-bold mb-6 text-white">Portfolio</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-light rounded-lg overflow-hidden">
-                            <img src="images/about_meyka.jpg" alt="Meyka" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold mb-2 text-white">Meyka - AI Stock Research Chatbot</h3>
-                                <p class="mb-4">An AI-powered stock research assistant that helps investors make
-                                    informed decisions in major international markets.</p>
-                                <a href="https://meyka.com/" target="_blank" class="text-primary hover:underline">View
-                                    Project</a>
-                            </div>
-                        </div>
-                        <div class="bg-light rounded-lg overflow-hidden">
-                            <img src="images/SalaryScout.png" alt="SalaryScout" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold mb-2 text-white">SalaryScout</h3>
-                                <p class="mb-4">A salary research tool that collects and analyzes developer salaries,
-                                    providing insights on average, maximum, and minimum salaries in the tech industry.
-                                </p>
-                                <a href="#" class="text-primary hover:underline">View Project</a>
-                            </div>
-                        </div>
-                        <div class="bg-light rounded-lg overflow-hidden">
-                            <img src="images/nepse-research.png" alt="NEPSE Research" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold mb-2 text-white">NEPSE Research</h3>
-                                <p class="mb-4">A comprehensive tool for the Nepal stock market featuring a stock
-                                    screener, candlestick pattern analysis, and chart pattern detection.</p>
-                                <a href="https://nepseresearch.com" target="_blank"
-                                    class="text-primary hover:underline">View Project</a>
-                            </div>
-                        </div>
-                        <div class="bg-light rounded-lg overflow-hidden">
-                            <img src="images/bravo-scan.png" alt="Bravo Scan" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold mb-2 text-white">Bravo Scan</h3>
-                                <p class="mb-4">A US market analysis tool offering technical indicators, stock
-                                    screening, and advanced market insights.</p>
-                                <a href="https://bravo-scan.com" target="_blank"
-                                    class="text-primary hover:underline">View Project</a>
-                            </div>
-                        </div>
+                        
                     </div>
                 </section>
             </div>
         </main>
     </div>
-
-    <script>
-        // Tab functionality
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const tabId = btn.getAttribute('data-tab');
-
-                tabBtns.forEach(b => b.classList.remove('active'));
-                tabContents.forEach(c => c.classList.add('hidden'));
-
-                btn.classList.add('active');
-                document.getElementById(tabId).classList.remove('hidden');
-            });
-        });
-    </script>
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const sidebar = document.querySelector('aside');
-
-        menuToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('show');
-        });
-
-        // Hide sidebar when clicking outside of it
-        document.addEventListener('click', (event) => {
-            if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
-                sidebar.classList.remove('show');
-            }
-        });
-
-        // Hide sidebar when a tab is clicked on mobile
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                if (window.innerWidth < 768) {
-                    sidebar.classList.remove('show');
-                }
-            });
-        });
-    </script>
+    <!-- Add this at the end of your body tag -->
+    <div id="popup-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div id="popup-content" class="bg-light p-8 rounded-lg max-w-2xl w-full max-h-90vh overflow-y-auto">
+            <button id="close-popup" class="float-right text-white">&times;</button>
+            <div id="popup-details"></div>
+        </div>
+    </div>
 </body>
 
 </html>
