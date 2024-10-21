@@ -428,7 +428,7 @@ document.addEventListener('DOMContentLoaded', function () {
         for (const [id, project] of Object.entries(projectDetails)) {
             portfolioHTML += `
                 <div class="bg-light rounded-lg overflow-hidden">
-                    <img src="${project.image}" alt="${project.title}" class="w-full h-48 object-cover">
+                    <img loading="lazy" src="${project.image}" alt="${project.title}" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-white">${project.title}</h3>
                         <p class="mb-4">${project.shortDescription}</p>
@@ -451,7 +451,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="popup-scroll-content">
                     <p class="mb-4">${project.longDescription}</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                        ${project.images.map(img => `<a href="${img}" target="_blank"><img src="${img}" alt="${project.title}" class="w-full rounded-lg"></a>`).join('')}
+                        ${project.images.map(img => `<a href="${img}" target="_blank"><img loading="lazy" src="${img}" alt="${project.title}" class="w-full rounded-lg"></a>`).join('')}
                     </div>
                 </div>
             `;
