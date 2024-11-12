@@ -1,12 +1,10 @@
-HTML, CSS, JavaScript and Bootstrap 5 Portfolio Website
-=======
-![Peek 2022-01-24 11-06](https://user-images.githubusercontent.com/11813341/150726892-d47d1860-b157-4453-aab0-860b1328b25c.gif)
+## Generating Tailwind CSS Output
 
-# Tools used #
-* HTML, CSS and JavaScript
-* [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-* [Font Awesome 5](https://fontawesome.com/)
-* [google map](https://www.embed-map.com/)
+To generate `output.css` from `input.css` using Tailwind CSS with a custom configuration, follow these steps:
 
-This is the [live demo](https://brad-portfolio.netlify.app/) of the project . 
+1. **Ensure `tailwindcss-windows.x64.exe`** is in the project directory or added to your system path.
 
+2. **Run the following command** to generate `output.css` and watch for changes:
+
+   ```bash
+   ./tailwindcss-windows-x64.exe -i ./input.css -o ./output.css --config ./tailwind.config.js --watch```
