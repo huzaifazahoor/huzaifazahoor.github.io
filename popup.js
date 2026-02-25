@@ -427,14 +427,14 @@ document.addEventListener('DOMContentLoaded', function () {
         let portfolioHTML = '';
         for (const [id, project] of Object.entries(projectDetails)) {
             portfolioHTML += `
-                <div class="bg-light rounded-lg overflow-hidden">
+                <div class="terminal-box overflow-hidden">
                     <img loading="lazy" src="${project.image}" alt="${project.title}" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-white">${project.title}</h3>
-                        <p class="mb-4">${project.shortDescription}</p>
+                    <div class="p-4">
+                        <h3 class="text-sm font-bold mb-2 text-white">${project.title}</h3>
+                        <p class="mb-3 text-xs text-code">${project.shortDescription}</p>
                         ${project.link
-                    ? `<a href="${project.link}" target="_blank" class="text-primary hover:underline">View Project</a>`
-                    : `<button class="text-primary hover:underline open-popup" data-project="${id}">View Details</button>`
+                    ? `<a href="${project.link}" target="_blank" class="text-primary hover:underline text-xs">[view project →]</a>`
+                    : `<button class="text-primary hover:underline open-popup text-xs" data-project="${id}">[view details →]</button>`
                 }
                     </div>
                 </div>
@@ -447,11 +447,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const project = projectDetails[projectId];
         if (project && !project.link) {
             let content = `
-                <h2 class="text-2xl font-bold mb-4 text-white">${project.title}</h2>
+                <p class="text-muted text-xs mb-1">/* project details */</p>
+                <h2 class="text-lg font-bold mb-4 text-primary">${project.title}</h2>
                 <div class="popup-scroll-content">
-                    <p class="mb-4">${project.longDescription}</p>
+                    <div class="text-sm mb-4 text-code">${project.longDescription}</div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                        ${project.images.map(img => `<a href="${img}" target="_blank"><img loading="lazy" src="${img}" alt="${project.title}" class="w-full rounded-lg"></a>`).join('')}
+                        ${project.images.map(img => `<a href="${img}" target="_blank"><img loading="lazy" src="${img}" alt="${project.title}" class="w-full border border-line"></a>`).join('')}
                     </div>
                 </div>
             `;

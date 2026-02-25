@@ -1,115 +1,124 @@
 <!DOCTYPE html>
+<!-- I asked a frontend dev to review this. They cried. -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huzaifa Zahoor - Software (Data) Engineer</title>
+    <title>Huzaifa Zahoor | Backend Dev (not a designer)</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- JetBrains Mono because I live in the terminal -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Favicons and Icons -->
+    <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
-    <!-- Android icons -->
     <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
 
-    <!-- Set theme and background color from manifest -->
-    <meta name="theme-color" content="#ffffff">
-    <meta name="background-color" content="#ffffff">
+    <meta name="theme-color" content="#1e1e1e">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="output.css">
     <script src="style.js" defer></script>
     <script src="popup.js" defer></script>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
 </head>
 
-<body class="bg-dark text-gray-300 font-sans">
+<body class="bg-dark text-code font-mono">
     <div class="flex">
-        <!-- Left Navbar -->
+
+        <!-- Sidebar -->
+        <!-- yes it's a sidebar. no i'm not changing it to a topbar. it works. -->
         <aside
-            class="fixed top-0 left-0 w-full md:w-64 bg-gray-800 h-screen overflow-y-auto z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out p-4">
-            <button id="sidebar-close" class="md:hidden absolute top-4 right-4 text-white">
+            class="fixed top-0 left-0 w-full md:w-64 bg-light h-screen overflow-y-auto z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out p-4 border-r border-line">
+            <button id="sidebar-close" class="md:hidden absolute top-4 right-4 text-code">
                 <i class="fas fa-times"></i>
             </button>
 
-            <div class="flex-shrink-0 text-center mb-4">
+            <!-- whoami -->
+            <div class="text-center mb-6">
+                <p class="text-muted text-xs mb-2">$ whoami</p>
                 <img src="images/profile.webp" alt="Huzaifa Zahoor"
-                    class="rounded-full w-24 h-24 object-cover mx-auto mb-2">
-                <h1 class="text-xl font-bold text-white">Huzaifa Zahoor</h1>
-                <p class="text-xs text-gray-400">Software (Data) Engineer</p>
+                    class="w-24 h-24 object-cover mx-auto mb-3 border-2 border-primary">
+                <h1 class="text-lg font-bold text-white">Huzaifa Zahoor</h1>
+                <p class="text-xs text-muted"># Software (Data) Engineer</p>
             </div>
 
-            <div
-                class="bg-light text-white p-3 rounded-lg mb-4 border border-primary hover:border-white transition-all duration-300">
-                <h2 class="font-bold text-sm mb-2">Get a Quote & Discuss about Projects</h2>
+            <!-- hire me -->
+            <div class="border border-primary p-3 mb-4 text-sm">
+                <p class="text-muted text-xs mb-2">/* Available for hire */</p>
                 <a href="https://api.whatsapp.com/send/?phone=923325758954&text=Hey%20Huzaifa.+Can+I+get+more+details.&type=phone_number"
-                    class="flex items-center justify-center bg-primary text-white py-2 px-3 rounded-lg hover:bg-blue-600 transition duration-300 text-sm">
+                    class="flex items-center justify-center bg-primary text-dark py-2 px-3 font-bold hover:opacity-90 transition text-sm">
                     <i class="fab fa-whatsapp mr-2"></i>
-                    <span class="font-semibold">Contact on WhatsApp</span>
+                    WhatsApp Me
                 </a>
             </div>
 
-            <div class="flex-grow overflow-y-auto space-y-2 text-sm">
+            <!-- contact info -->
+            <div class="space-y-2 text-sm mb-4">
+                <p class="text-muted text-xs">-- contact --</p>
                 <div class="flex items-center">
-                    <i class="fas fa-envelope mr-2 text-primary"></i>
-                    <a href="mailto:huzaifazahoor654@gmail.com" class="hover:text-primary truncate text-white"
+                    <span class="text-primary mr-2">></span>
+                    <a href="mailto:huzaifazahoor654@gmail.com" class="hover:text-primary truncate text-code"
                         title="huzaifazahoor654@gmail.com">
                         huzaifazahoor654@gmail.com
                     </a>
                 </div>
-                <div class="flex items-center text-white">
-                    <i class="fas fa-map-marker-alt mr-2 text-primary"></i>
-                    <span>Islamabad, Pakistan</span>
+                <div class="flex items-center">
+                    <span class="text-primary mr-2">></span>
+                    <span class="text-code">Islamabad, Pakistan</span>
                 </div>
-                <div class="flex items-center text-white">
-                    <i class="fas fa-clock mr-2 text-primary"></i>
-                    <span>5:00 AM - 5:00 PM (UTC)</span>
+                <div class="flex items-center">
+                    <span class="text-primary mr-2">></span>
+                    <span class="text-code">UTC+5 (5AM - 5PM UTC)</span>
                 </div>
             </div>
 
-            <div class="flex-shrink-0 space-y-2 mt-4 text-sm">
+            <!-- social links -->
+            <div class="space-y-2 text-sm">
+                <p class="text-muted text-xs">-- links --</p>
                 <a href="https://medium.com/@huzaifazahoor654" target="_blank"
-                    class="flex items-center hover:text-primary transition text-white">
-                    <i class="fab fa-medium mr-2"></i> Medium
+                    class="flex items-center hover:text-primary transition text-code">
+                    <i class="fab fa-medium mr-2 text-primary"></i> medium.com/@huzaifazahoor654
                 </a>
                 <a href="https://www.linkedin.com/in/huzaifazahoor" target="_blank"
-                    class="flex items-center hover:text-primary transition text-white">
-                    <i class="fab fa-linkedin mr-2"></i> LinkedIn
+                    class="flex items-center hover:text-primary transition text-code">
+                    <i class="fab fa-linkedin mr-2 text-primary"></i> linkedin/huzaifazahoor
                 </a>
                 <a href="https://github.com/huzaifazahoor" target="_blank"
-                    class="flex items-center hover:text-primary transition text-white">
-                    <i class="fab fa-github mr-2"></i> GitHub
+                    class="flex items-center hover:text-primary transition text-code">
+                    <i class="fab fa-github mr-2 text-primary"></i> github/huzaifazahoor
                 </a>
                 <a href="https://stackoverflow.com/users/7136640/huzaifa-zahoor" target="_blank"
-                    class="flex items-center hover:text-primary transition text-white">
-                    <i class="fab fa-stack-overflow mr-2"></i> Stack Overflow
+                    class="flex items-center hover:text-primary transition text-code">
+                    <i class="fab fa-stack-overflow mr-2 text-primary"></i> stackoverflow
                 </a>
                 <a href="https://facebook.com/huzaifazahoor654" target="_blank"
-                    class="flex items-center hover:text-primary transition text-white">
-                    <i class="fab fa-facebook mr-2"></i> Facebook
+                    class="flex items-center hover:text-primary transition text-code">
+                    <i class="fab fa-facebook mr-2 text-primary"></i> facebook
                 </a>
                 <a href="https://www.youtube.com/@huzaifazahoor654" target="_blank"
-                    class="flex items-center hover:text-primary transition text-white">
-                    <i class="fab fa-youtube mr-2"></i> Youtube
+                    class="flex items-center hover:text-primary transition text-code">
+                    <i class="fab fa-youtube mr-2 text-primary"></i> youtube
                 </a>
             </div>
         </aside>
 
         <!-- Main Content -->
-        <main class="ml-0 md:ml-72 mt-0 md:mt-24 p-4 transition-all duration-300 ease-in-out">
-            <!-- Top Navigation -->
+        <main class="ml-0 md:ml-64 mt-0 md:mt-16 p-4 transition-all duration-300 ease-in-out w-full">
+
+            <!-- Top Nav -->
+            <!-- nav.exe has stopped working (jk it works fine) -->
             <nav
-                class="fixed top-0 left-0 right-0 md:top-4 md:left-72 md:right-4 h-16 bg-gray-800 px-4 flex items-center justify-end">
-                <div class="flex justify-end items-center">
-                    <div class="space-x-2 md:space-x-6 flex items-center">
-                        <button class="tab-btn active" data-tab="about">About</button>
-                        <button class="tab-btn" data-tab="skills">Skills</button>
-                        <button class="tab-btn" data-tab="experience">Experience</button>
-                        <button class="tab-btn" data-tab="portfolio">Portfolio</button>
+                class="fixed top-0 left-0 right-0 md:left-64 h-16 bg-light border-b border-line px-4 flex items-center z-40">
+                <div class="flex items-center w-full">
+                    <span class="text-muted text-xs hidden md:block mr-auto">// portfolio.py --version 1.0.0</span>
+                    <div class="space-x-1 md:space-x-2 flex items-center ml-auto">
+                        <button class="tab-btn active" data-tab="about">[about]</button>
+                        <button class="tab-btn" data-tab="skills">[skills]</button>
+                        <button class="tab-btn" data-tab="experience">[experience]</button>
+                        <button class="tab-btn" data-tab="portfolio">[portfolio]</button>
                         <button id="menu-toggle" class="md:hidden tab-btn">
                             <i class="fas fa-bars"></i>
                         </button>
@@ -117,225 +126,241 @@
                 </div>
             </nav>
 
-            <!-- Content Sections -->
-            <div class="p-8">
-                <!-- About Section -->
+            <!-- Sections -->
+            <div class="p-4 md:p-8 mt-4">
+
+                <!-- About -->
                 <section id="about" class="tab-content active">
-                    <h2 class="text-3xl font-bold mb-6 text-white">About Me</h2>
-                    <div class="bg-light p-6 rounded-lg">
-                        <p class="text-lg mb-6">
-                            I’m a <strong>Software (Data) Engineer</strong> focused on <strong>Python, Django, and Cloud
-                                (AWS/GCP)</strong>. I build real-time data tools, stock market solutions, and smooth ETL
-                            pipelines.
+                    <h2 class="section-title"># about_me</h2>
+                    <div class="terminal-box p-6">
+                        <p class="text-muted text-sm mb-3">"""</p>
+                        <p class="text-base mb-3">
+                            I'm a <span class="text-primary font-bold">Software (Data) Engineer</span> focused on
+                            <span class="text-primary">Python, Django, and Cloud (AWS/GCP)</span>.
+                            I build real-time data tools, stock market solutions, and ETL pipelines.
                         </p>
-                        <ul class="list-disc list-inside text-lg mb-6">
-                            <li><strong>Co-founder of <a href="https://meyka.com/"
-                                        class="text-primary hover:underline">Meyka</a></strong>: A FinTech SaaS for
-                                AI-powered stock research that helps users make smart financial decisions.</li>
-                            <li><strong>Top-Rated Freelancer</strong>: 5-star rating on Fiverr, 100% success on Upwork
-                                for reliability and attention to detail.</li>
-                            <li><strong>Published Author</strong>: 30,000+ readers for my articles on Django, Airflow,
-                                and data engineering on Medium.</li>
-                            <li><strong>Stock Market Tools</strong>: Built stock screeners, Discord bots, and tools for
-                                various stock exchanges.</li>
+                        <p class="text-muted text-sm mb-5">"""</p>
+                        <ul class="space-y-3 text-sm">
+                            <li>
+                                <span class="text-primary">→</span>
+                                <strong class="text-white">Co-founder of <a href="https://meyka.com/"
+                                        class="text-primary hover:underline">Meyka</a></strong>:
+                                AI-powered FinTech SaaS for stock research. Helps users make smart financial decisions.
+                            </li>
+                            <li>
+                                <span class="text-primary">→</span>
+                                <strong class="text-white">Top-Rated Freelancer</strong>:
+                                5-star rating on Fiverr, 100% success on Upwork. Clients keep coming back (I think I
+                                fixed the bug).
+                            </li>
+                            <li>
+                                <span class="text-primary">→</span>
+                                <strong class="text-white">Published Author</strong>:
+                                30,000+ readers on Medium. Topics: Django, Airflow, data engineering.
+                            </li>
+                            <li>
+                                <span class="text-primary">→</span>
+                                <strong class="text-white">Stock Market Tools</strong>:
+                                Built screeners, Discord bots, and tools for multiple stock exchanges.
+                            </li>
                         </ul>
-                        <p class="text-lg">
-                            I post daily on LinkedIn with tips on tech careers, resume improvement, LinkedIn profile
-                            optimization, and job skills. Connect if you want to grow in tech or need real-world data
-                            solutions.
+                        <p class="text-muted text-xs mt-6 border-t border-line pt-4">
+                            # I post daily on LinkedIn. Connect if you want to grow in tech or need data solutions.
+                        </p>
+                        <p class="text-muted text-xs mt-2">
+                            /* disclaimer: this portfolio was designed by a backend developer. no frontend devs were
+                            harmed. */
                         </p>
                     </div>
                 </section>
 
-                <!-- Skills Section -->
+                <!-- Skills -->
                 <section id="skills" class="tab-content hidden">
-                    <h2 class="text-3xl font-bold mb-6 text-white">Technical Skills</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-light p-6 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-4 text-white">Languages & Frameworks</h3>
-                            <ul class="list-disc pl-5 space-y-2">
-                                <li>Python</li>
-                                <li>Django</li>
-                                <li>Django REST Framework</li>
-                                <li>React JS</li>
-                                <li>Langchain</li>
-                                <li>Flask</li>
-                                <li>Bootstrap</li>
-                                <li>Tailwind CSS</li>
+                    <h2 class="section-title"># technical_skills</h2>
+                    <!-- pip install everything -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                        <div class="terminal-box p-4">
+                            <p class="text-primary text-sm mb-3">$ cat languages_and_frameworks.txt</p>
+                            <ul class="space-y-1 text-sm">
+                                <li><span class="text-muted">-</span> Python</li>
+                                <li><span class="text-muted">-</span> Django</li>
+                                <li><span class="text-muted">-</span> Django REST Framework</li>
+                                <li><span class="text-muted">-</span> React JS <span class="text-muted text-xs"># frontend, don't ask</span></li>
+                                <li><span class="text-muted">-</span> Langchain</li>
+                                <li><span class="text-muted">-</span> Flask</li>
+                                <li><span class="text-muted">-</span> Bootstrap</li>
+                                <li><span class="text-muted">-</span> Tailwind CSS <span class="text-muted text-xs"># yes, used it here too</span></li>
                             </ul>
                         </div>
-                        <div class="bg-light p-6 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-4 text-white">Cloud & DevOps</h3>
-                            <ul class="list-disc pl-5 space-y-2">
-                                <li>AWS (EC2, Lightsail, Lambda, CloudWatch, RDS, ElasticBeanstalk, Glue, Secret
-                                    Manager, S3)</li>
-                                <li>GCP (Compute Engine, App Engine, Cloud Run, Cloud SQL, IAM, Cloud Functions, Cloud
-                                    Storage, Cloud Firestore)</li>
-                                <li>Azure (VM, Data Bricks, Blob Storage, Data Factory)</li>
-                                <li>Docker</li>
-                                <li>GitHub Actions</li>
+
+                        <div class="terminal-box p-4">
+                            <p class="text-primary text-sm mb-3">$ cat cloud_and_devops.txt</p>
+                            <ul class="space-y-1 text-sm">
+                                <li><span class="text-muted">-</span> AWS (EC2, Lightsail, Lambda, CloudWatch, RDS, Glue, S3...)</li>
+                                <li><span class="text-muted">-</span> GCP (Compute Engine, Cloud Run, Cloud SQL, Cloud Functions...)</li>
+                                <li><span class="text-muted">-</span> Azure (VM, Databricks, Blob Storage, Data Factory)</li>
+                                <li><span class="text-muted">-</span> Docker</li>
+                                <li><span class="text-muted">-</span> GitHub Actions</li>
                             </ul>
                         </div>
-                        <div class="bg-light p-6 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-4 text-white">Data Engineering & Analytics</h3>
-                            <ul class="list-disc pl-5 space-y-2">
-                                <li>Apache Airflow</li>
-                                <li>ETL Pipelines</li>
-                                <li>Kafka</li>
-                                <li>PySpark</li>
-                                <li>Snowflake</li>
-                                <li>Localstack</li>
-                                <li>Fivetran</li>
-                                <li>Data Warehouses</li>
-                                <li>Data Lakes</li>
-                                <li>Data Analysis</li>
-                                <li>Data Modeling</li>
-                                <li>SSIS</li>
+
+                        <div class="terminal-box p-4">
+                            <p class="text-primary text-sm mb-3">$ cat data_engineering.txt</p>
+                            <ul class="space-y-1 text-sm">
+                                <li><span class="text-muted">-</span> Apache Airflow</li>
+                                <li><span class="text-muted">-</span> ETL Pipelines <span class="text-muted text-xs"># my bread and butter</span></li>
+                                <li><span class="text-muted">-</span> Kafka</li>
+                                <li><span class="text-muted">-</span> PySpark</li>
+                                <li><span class="text-muted">-</span> Snowflake</li>
+                                <li><span class="text-muted">-</span> Fivetran</li>
+                                <li><span class="text-muted">-</span> Data Warehouses &amp; Data Lakes</li>
+                                <li><span class="text-muted">-</span> Data Modeling / Analysis</li>
+                                <li><span class="text-muted">-</span> SSIS</li>
                             </ul>
                         </div>
-                        <div class="bg-light p-6 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-4 text-white">Databases</h3>
-                            <ul class="list-disc pl-5 space-y-2">
-                                <li>SQL (PostgreSQL, MySQL, MsSQL)</li>
-                                <li>NoSQL (MongoDB)</li>
+
+                        <div class="terminal-box p-4">
+                            <p class="text-primary text-sm mb-3">$ cat databases.txt</p>
+                            <ul class="space-y-1 text-sm">
+                                <li><span class="text-muted">-</span> PostgreSQL <span class="text-muted text-xs"># the goat</span></li>
+                                <li><span class="text-muted">-</span> MySQL</li>
+                                <li><span class="text-muted">-</span> MsSQL</li>
+                                <li><span class="text-muted">-</span> MongoDB</li>
                             </ul>
                         </div>
-                        <div class="bg-light p-6 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-4 text-white">AI & Machine Learning</h3>
-                            <ul class="list-disc pl-5 space-y-2">
-                                <li>OpenAI</li>
-                                <li>Gemini</li>
-                                <li>Claude</li>
-                                <li>NLP</li>
-                                <li>Spacy</li>
+
+                        <div class="terminal-box p-4">
+                            <p class="text-primary text-sm mb-3">$ cat ai_and_ml.txt</p>
+                            <ul class="space-y-1 text-sm">
+                                <li><span class="text-muted">-</span> OpenAI</li>
+                                <li><span class="text-muted">-</span> Gemini</li>
+                                <li><span class="text-muted">-</span> Claude <span class="text-muted text-xs"># helped me write this portfolio</span></li>
+                                <li><span class="text-muted">-</span> NLP / Spacy</li>
                             </ul>
                         </div>
-                        <div class="bg-light p-6 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-4 text-white">Testing & Development Practices</h3>
-                            <ul class="list-disc pl-5 space-y-2">
-                                <li>Unit Testing</li>
-                                <li>Integration Testing</li>
-                                <li>Test Driven Development (TDD)</li>
-                                <li>Git & GitHub</li>
-                                <li>Web Scraping & Automation</li>
+
+                        <div class="terminal-box p-4">
+                            <p class="text-primary text-sm mb-3">$ cat testing_and_practices.txt</p>
+                            <ul class="space-y-1 text-sm">
+                                <li><span class="text-muted">-</span> Unit Testing</li>
+                                <li><span class="text-muted">-</span> Integration Testing</li>
+                                <li><span class="text-muted">-</span> TDD <span class="text-muted text-xs"># I actually do this, unlike most devs</span></li>
+                                <li><span class="text-muted">-</span> Git &amp; GitHub</li>
+                                <li><span class="text-muted">-</span> Web Scraping &amp; Automation</li>
                             </ul>
                         </div>
+
                     </div>
                 </section>
 
-                <!-- Experience Section -->
+                <!-- Experience -->
                 <section id="experience" class="tab-content hidden">
-                    <h2 class="text-3xl font-bold mb-6 text-white">Professional Experience</h2>
-                    <div class="space-y-6">
-                        <div class="bg-light p-6 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-2 text-white">Technical Co-Founder, MEYKA PTY LTD</h3>
-                            <p class="text-gray-400 mb-4">October 2023 - Present</p>
-                            <ul class="list-disc pl-5 space-y-2">
-                                <li>Founded and built an AI-powered stock research chatbot using ChatGPT API for major
-                                    international markets.</li>
-                                <li>Led a team of 8 people, including developers and marketers.</li>
-                                <li>Managed cloud services on GCP with 0% downtime with cost-effective solutions.</li>
-                                <li>Built the entire backend and trained ChatGPT to specialize in finance.</li>
-                                <li>Created useful tools like a stock screener and stock price forecasting for 2000
-                                    monthly traffic.</li>
-                                <li>Focused on accuracy and performance based on using user feedback.</li>
-                                <li>Planned new features to keep users engaged and satisfied.</li>
+                    <h2 class="section-title"># experience</h2>
+                    <p class="text-muted text-sm mb-4">$ git log --oneline <span class="text-code"># my career history</span></p>
+                    <div class="space-y-4">
+
+                        <div class="terminal-box p-5">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                                <h3 class="text-white font-bold">Technical Co-Founder @ MEYKA PTY LTD</h3>
+                                <span class="text-primary text-xs whitespace-nowrap">Oct 2023 – Present</span>
+                            </div>
+                            <ul class="space-y-2 text-sm">
+                                <li><span class="text-primary">+</span> Built AI-powered stock research chatbot (ChatGPT API) for major international markets.</li>
+                                <li><span class="text-primary">+</span> Led team of 8 — developers and marketers.</li>
+                                <li><span class="text-primary">+</span> Managed GCP cloud infrastructure with 0% downtime.</li>
+                                <li><span class="text-primary">+</span> Built entire backend and fine-tuned ChatGPT to specialize in finance.</li>
+                                <li><span class="text-primary">+</span> Shipped stock screener and price forecasting tools → 2000 monthly users.</li>
                             </ul>
                         </div>
-                        <div class="bg-light p-6 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-2 text-white">Freelance Software & Data Engineer</h3>
-                            <p class="text-gray-400 mb-4">February 2021 - Present</p>
-                            <ul class="list-disc pl-5 space-y-2">
-                                <li>Developed a real-time stock market WhatsApp chatbot for the Saudi Exchange using
-                                    OpenAI's GPT API with 100% uptime on the cloud.</li>
-                                <li>Architected a scalable data pipeline on AWS Glue with Python.</li>
-                                <li>Automated transcription of 5TB of video courses into text using Deepgram API and
-                                    uploading transcripts into Google Sheets.</li>
-                                <li>Created web scraping solutions for clients, using ETL pipelines to transform and
-                                    store data in various formats.</li>
-                                <li>Designed and implemented stock and crypto screeners with advanced analysis and
-                                    forecasting.</li>
+
+                        <div class="terminal-box p-5">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                                <h3 class="text-white font-bold">Freelance Software &amp; Data Engineer</h3>
+                                <span class="text-primary text-xs whitespace-nowrap">Feb 2021 – Present</span>
+                            </div>
+                            <ul class="space-y-2 text-sm">
+                                <li><span class="text-primary">+</span> Real-time WhatsApp stock chatbot for Saudi Exchange (OpenAI GPT, 100% uptime on cloud).</li>
+                                <li><span class="text-primary">+</span> Scalable data pipeline on AWS Glue with Python.</li>
+                                <li><span class="text-primary">+</span> Automated transcription of 5TB of video courses → Google Sheets (Deepgram API).</li>
+                                <li><span class="text-primary">+</span> Web scraping + ETL pipelines for various clients.</li>
+                                <li><span class="text-primary">+</span> Stock and crypto screeners with advanced analysis and forecasting.</li>
                             </ul>
                         </div>
-                        <div class="bg-light p-6 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-2 text-white">Senior Software and Data Engineer, ML
-                                Sense Solutions</h3>
-                            <p class="text-gray-400 mb-4">December 2022 - November 2023</p>
-                            <ul class="list-disc pl-5 space-y-2">
-                                <li>Streamlined data flow from various sources to Data Warehouses and Data Lakes,
-                                    improving data accuracy by 95% using Python and Apache Airflow, as well as ETL
-                                    tools.</li>
-                                <li>As the project manager, I led the development and execution of a job analytics
-                                    platform, coordinating the team to scrape job listings and visualize insights
-                                    through a user-friendly dashboard.</li>
-                                <li>Implemented Test-Driven Development (TDD) with code coverage over 90%+.</li>
-                                <li>Hired and trained 10+ software engineers improving team effectiveness.</li>
+
+                        <div class="terminal-box p-5">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                                <h3 class="text-white font-bold">Senior Software &amp; Data Engineer @ ML Sense Solutions</h3>
+                                <span class="text-primary text-xs whitespace-nowrap">Dec 2022 – Nov 2023</span>
+                            </div>
+                            <ul class="space-y-2 text-sm">
+                                <li><span class="text-primary">+</span> Streamlined data from multiple sources to warehouses/lakes → 95% accuracy improvement.</li>
+                                <li><span class="text-primary">+</span> Led job analytics platform (scraping + dashboard).</li>
+                                <li><span class="text-primary">+</span> TDD with 90%+ code coverage.</li>
+                                <li><span class="text-primary">+</span> Hired and trained 10+ engineers.</li>
                             </ul>
                         </div>
-                        <div class="bg-light p-6 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-2 text-white">Technical Team Lead, Million News Media
-                                (PVT) Ltd.</h3>
-                            <p class="text-gray-400 mb-4">December 2022 - June 2023</p>
-                            <ul class="list-disc pl-5 space-y-2">
-                                <li>Managed a team of 5 developers and improving efficiency by 30%.</li>
-                                <li>Conducted 50+ interviews, achieving a 70% hiring success rate for backend roles.
-                                </li>
-                                <li>Adopted new technologies, reducing cloud costs by 50% and increasing uptime to 100%.
-                                </li>
+
+                        <div class="terminal-box p-5">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                                <h3 class="text-white font-bold">Technical Team Lead @ Million News Media (PVT) Ltd.</h3>
+                                <span class="text-primary text-xs whitespace-nowrap">Dec 2022 – Jun 2023</span>
+                            </div>
+                            <ul class="space-y-2 text-sm">
+                                <li><span class="text-primary">+</span> Managed 5 developers, improved team efficiency by 30%.</li>
+                                <li><span class="text-primary">+</span> Conducted 50+ interviews, 70% hiring success rate.</li>
+                                <li><span class="text-primary">+</span> Reduced cloud costs by 50%, uptime → 100%.</li>
                             </ul>
                         </div>
-                        <div class="bg-light p-6 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-2 text-white">Python Developer, Million News Media (PVT)
-                                Ltd.</h3>
-                            <p class="text-gray-400 mb-4">September 2020 - December 2021</p>
-                            <ul class="list-disc pl-5 space-y-2">
-                                <li>Developed a Django-based stock screener, enabling real-time market data insights for
-                                    investors.</li>
-                                <li>Explored and deployed the stock screener on AWS and Digital Ocean and adopted new
-                                    technologies.</li>
-                                <li>Recommended new technologies to enhance product performance, driving continuous
-                                    improvement.</li>
-                                <li>Developed automation tools for financial writers and management in Python.</li>
-                                <li>Developed a Django-based stock screener, enabling real-time market data insights for
-                                    investors.</li>
-                                <li>Explored and deployed the stock screener on AWS and Digital Ocean and adopted new
-                                    technologies.</li>
-                                <li>Recommended new technologies to enhance product performance, driving continuous
-                                    improvement.</li>
-                                <li>Developed automation tools for financial writers and management in Python.</li>
+
+                        <div class="terminal-box p-5">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                                <h3 class="text-white font-bold">Python Developer @ Million News Media (PVT) Ltd.</h3>
+                                <span class="text-primary text-xs whitespace-nowrap">Sep 2020 – Dec 2021</span>
+                            </div>
+                            <ul class="space-y-2 text-sm">
+                                <li><span class="text-primary">+</span> Django-based stock screener with real-time market data insights.</li>
+                                <li><span class="text-primary">+</span> Deployed on AWS and Digital Ocean.</li>
+                                <li><span class="text-primary">+</span> Python automation tools for financial writers and management.</li>
                             </ul>
                         </div>
-                        <div class="bg-light p-6 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-2 text-white">Frontend Developer, Hi-Data Technologies
-                            </h3>
-                            <p class="text-gray-400 mb-4">June 2019 - July 2019</p>
-                            <ul class="list-disc pl-5 space-y-2">
-                                <li>Excelled in Bootstrap frontend framework, enhancing frontend development
-                                    capabilities and delivering intuitive user interfaces.</li>
-                                <li>Leveraged Adobe Photoshop skills to create visually compelling graphics and designs,
-                                    showcasing creativity and attention to detail.</li>
+
+                        <div class="terminal-box p-5">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                                <h3 class="text-white font-bold">Frontend Developer @ Hi-Data Technologies</h3>
+                                <span class="text-primary text-xs whitespace-nowrap">Jun 2019 – Jul 2019</span>
+                            </div>
+                            <p class="text-muted text-xs mb-3"># yes I tried frontend once. never again. this is why I'm a backend dev.</p>
+                            <ul class="space-y-2 text-sm">
+                                <li><span class="text-primary">+</span> Bootstrap frontend development.</li>
+                                <li><span class="text-primary">+</span> Adobe Photoshop for graphics and design.</li>
                             </ul>
                         </div>
+
                     </div>
                 </section>
 
-                <!-- Portfolio Section -->
+                <!-- Portfolio -->
                 <section id="portfolio" class="tab-content hidden">
-                    <h2 class="text-3xl font-bold mb-6 text-white">Portfolio</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
+                    <h2 class="section-title"># portfolio</h2>
+                    <p class="text-muted text-sm mb-4">// things I actually built (frontend was mostly an accident)</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- generated by popup.js, don't touch -->
                     </div>
                 </section>
+
             </div>
         </main>
     </div>
-    <!-- Add this at the end of your body tag -->
-    <div id="popup-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-        <div id="popup-content" class="bg-light p-8 rounded-lg max-w-2xl w-full max-h-90vh overflow-y-auto">
-            <button id="close-popup" class="float-right text-white">&times;</button>
+
+    <!-- Popup overlay -->
+    <div id="popup-overlay" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+        <div id="popup-content" class="bg-light border border-line p-8 max-w-2xl w-full mx-4 max-h-screen overflow-y-auto">
+            <button id="close-popup" class="float-right text-primary font-bold text-sm">[x close]</button>
             <div id="popup-details"></div>
         </div>
     </div>
+
 </body>
 
 </html>
