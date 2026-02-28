@@ -1,23 +1,18 @@
 <!DOCTYPE html>
-<!-- I asked a frontend dev to review this. They cried. -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huzaifa Zahoor | Backend Dev (not a designer)</title>
+    <title>Huzaifa Zahoor — Software Engineer</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <!-- JetBrains Mono because I live in the terminal -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
-
-    <meta name="theme-color" content="#1e1e1e">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="output.css">
@@ -25,338 +20,380 @@
     <script src="popup.js" defer></script>
 </head>
 
-<body class="bg-dark text-code font-mono">
-    <div class="flex">
+<body class="bg-dark text-bright font-sans min-h-screen">
 
-        <!-- Sidebar -->
-        <!-- yes it's a sidebar. no i'm not changing it to a topbar. it works. -->
-        <aside
-            class="fixed top-0 left-0 w-full md:w-64 bg-light h-screen overflow-y-auto z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out p-4 border-r border-line">
-            <button id="sidebar-close" class="md:hidden absolute top-4 right-4 text-code">
-                <i class="fas fa-times"></i>
-            </button>
-
-            <!-- whoami -->
-            <div class="text-center mb-6">
-                <p class="text-muted text-xs mb-2">$ whoami</p>
-                <img src="images/profile.webp" alt="Huzaifa Zahoor"
-                    class="w-24 h-24 object-cover mx-auto mb-3 border-2 border-primary">
-                <h1 class="text-lg font-bold text-white">Huzaifa Zahoor</h1>
-                <p class="text-xs text-muted"># Software (Data) Engineer</p>
+    <!-- STICKY NAV -->
+    <nav class="sticky top-0 z-50 bg-dark border-b border-edge">
+        <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+            <span class="font-bold text-bright text-lg tracking-tight flex-shrink-0">
+                HZ<span class="text-accent">.</span>
+            </span>
+            <div class="flex items-center gap-1 overflow-x-auto">
+                <button class="tab-btn active" data-tab="about">About</button>
+                <button class="tab-btn" data-tab="skills">Skills</button>
+                <button class="tab-btn" data-tab="experience">Experience</button>
+                <button class="tab-btn" data-tab="portfolio">Portfolio</button>
             </div>
+        </div>
+    </nav>
 
-            <!-- hire me -->
-            <div class="border border-primary p-3 mb-4 text-sm">
-                <p class="text-muted text-xs mb-2">/* Available for hire */</p>
-                <a href="https://api.whatsapp.com/send/?phone=923325758954&text=Hey%20Huzaifa.+Can+I+get+more+details.&type=phone_number"
-                    class="flex items-center justify-center bg-primary text-dark py-2 px-3 font-bold hover:opacity-90 transition text-sm">
-                    <i class="fab fa-whatsapp mr-2"></i>
-                    WhatsApp Me
-                </a>
-            </div>
+    <!-- MAIN CONTENT -->
+    <main class="max-w-5xl mx-auto px-4 py-8">
 
-            <!-- contact info -->
-            <div class="space-y-2 text-sm mb-4">
-                <p class="text-muted text-xs">-- contact --</p>
-                <div class="flex items-center">
-                    <span class="text-primary mr-2">></span>
-                    <a href="mailto:huzaifazahoor654@gmail.com" class="hover:text-primary truncate text-code"
-                        title="huzaifazahoor654@gmail.com">
-                        huzaifazahoor654@gmail.com
-                    </a>
-                </div>
-                <div class="flex items-center">
-                    <span class="text-primary mr-2">></span>
-                    <span class="text-code">Islamabad, Pakistan</span>
-                </div>
-                <div class="flex items-center">
-                    <span class="text-primary mr-2">></span>
-                    <span class="text-code">UTC+5 (5AM - 5PM UTC)</span>
-                </div>
-            </div>
+        <!-- ===== ABOUT ===== -->
+        <section id="about" class="tab-content active">
 
-            <!-- social links -->
-            <div class="space-y-2 text-sm">
-                <p class="text-muted text-xs">-- links --</p>
-                <a href="https://medium.com/@huzaifazahoor654" target="_blank"
-                    class="flex items-center hover:text-primary transition text-code">
-                    <i class="fab fa-medium mr-2 text-primary"></i> medium.com/@huzaifazahoor654
-                </a>
-                <a href="https://www.linkedin.com/in/huzaifazahoor" target="_blank"
-                    class="flex items-center hover:text-primary transition text-code">
-                    <i class="fab fa-linkedin mr-2 text-primary"></i> linkedin/huzaifazahoor
-                </a>
-                <a href="https://github.com/huzaifazahoor" target="_blank"
-                    class="flex items-center hover:text-primary transition text-code">
-                    <i class="fab fa-github mr-2 text-primary"></i> github/huzaifazahoor
-                </a>
-                <a href="https://stackoverflow.com/users/7136640/huzaifa-zahoor" target="_blank"
-                    class="flex items-center hover:text-primary transition text-code">
-                    <i class="fab fa-stack-overflow mr-2 text-primary"></i> stackoverflow
-                </a>
-                <a href="https://facebook.com/huzaifazahoor654" target="_blank"
-                    class="flex items-center hover:text-primary transition text-code">
-                    <i class="fab fa-facebook mr-2 text-primary"></i> facebook
-                </a>
-                <a href="https://www.youtube.com/@huzaifazahoor654" target="_blank"
-                    class="flex items-center hover:text-primary transition text-code">
-                    <i class="fab fa-youtube mr-2 text-primary"></i> youtube
-                </a>
-            </div>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="ml-0 md:ml-64 mt-0 md:mt-16 p-4 transition-all duration-300 ease-in-out w-full">
-
-            <!-- Top Nav -->
-            <!-- nav.exe has stopped working (jk it works fine) -->
-            <nav
-                class="fixed top-0 left-0 right-0 md:left-64 h-16 bg-light border-b border-line px-4 flex items-center z-40">
-                <div class="flex items-center w-full">
-                    <span class="text-muted text-xs hidden md:block mr-auto">// portfolio.py --version 1.0.0</span>
-                    <div class="space-x-1 md:space-x-2 flex items-center ml-auto">
-                        <button class="tab-btn active" data-tab="about">[about]</button>
-                        <button class="tab-btn" data-tab="skills">[skills]</button>
-                        <button class="tab-btn" data-tab="experience">[experience]</button>
-                        <button class="tab-btn" data-tab="portfolio">[portfolio]</button>
-                        <button id="menu-toggle" class="md:hidden tab-btn">
-                            <i class="fas fa-bars"></i>
-                        </button>
+            <!-- Profile card -->
+            <div class="bg-surface border border-edge rounded-xl p-6 md:p-8 mb-6">
+                <div class="flex flex-col md:flex-row gap-6 items-center md:items-start">
+                    <img src="images/profile.webp" alt="Huzaifa Zahoor"
+                        class="w-28 h-28 rounded-full object-cover border-4 border-accent flex-shrink-0">
+                    <div class="text-center md:text-left flex-1">
+                        <h1 class="text-2xl md:text-3xl font-bold text-bright mb-1">Huzaifa Zahoor</h1>
+                        <p class="text-accent font-semibold mb-4">Software (Data) Engineer</p>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-x-5 gap-y-1.5 text-dim text-sm mb-5">
+                            <span>📍 Islamabad, Pakistan</span>
+                            <span>🕐 5:00 AM – 5:00 PM UTC</span>
+                            <a href="mailto:huzaifazahoor654@gmail.com"
+                                class="hover:text-accent transition-colors">
+                                📧 huzaifazahoor654@gmail.com
+                            </a>
+                        </div>
+                        <!-- Social icons -->
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-5">
+                            <a href="https://www.linkedin.com/in/huzaifazahoor" target="_blank"
+                                class="text-dim hover:text-accent transition-colors text-xl" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/huzaifazahoor" target="_blank"
+                                class="text-dim hover:text-accent transition-colors text-xl" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://medium.com/@huzaifazahoor654" target="_blank"
+                                class="text-dim hover:text-accent transition-colors text-xl" title="Medium">
+                                <i class="fab fa-medium"></i>
+                            </a>
+                            <a href="https://stackoverflow.com/users/7136640/huzaifa-zahoor" target="_blank"
+                                class="text-dim hover:text-accent transition-colors text-xl" title="Stack Overflow">
+                                <i class="fab fa-stack-overflow"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@huzaifazahoor654" target="_blank"
+                                class="text-dim hover:text-accent transition-colors text-xl" title="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://facebook.com/huzaifazahoor654" target="_blank"
+                                class="text-dim hover:text-accent transition-colors text-xl" title="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </div>
+                        <!-- CTA -->
+                        <a href="https://api.whatsapp.com/send/?phone=923325758954&text=Hey%20Huzaifa.+Can+I+get+more+details.&type=phone_number"
+                            target="_blank"
+                            class="inline-flex items-center gap-2 bg-accent text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity">
+                            <i class="fab fa-whatsapp"></i>
+                            Contact on WhatsApp
+                        </a>
                     </div>
                 </div>
-            </nav>
+            </div>
 
-            <!-- Sections -->
-            <div class="p-4 md:p-8 mt-4">
+            <!-- Bio card -->
+            <div class="bg-surface border border-edge rounded-xl p-6">
+                <h2 class="text-base font-semibold text-bright mb-4">About Me</h2>
+                <p class="text-dim leading-relaxed mb-5">
+                    I'm a <strong class="text-bright">Software (Data) Engineer</strong> focused on
+                    <strong class="text-bright">Python, Django, and Cloud (AWS/GCP)</strong>.
+                    I build real-time data tools, stock market solutions, and ETL pipelines.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex gap-3">
+                        <span class="text-accent flex-shrink-0 mt-0.5">▹</span>
+                        <span class="text-dim">
+                            <strong class="text-bright">Co-founder of
+                                <a href="https://meyka.com/" target="_blank"
+                                    class="text-accent hover:underline">Meyka</a></strong>
+                            — AI-powered FinTech SaaS for stock research. Helps users make smart financial decisions.
+                        </span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="text-accent flex-shrink-0 mt-0.5">▹</span>
+                        <span class="text-dim">
+                            <strong class="text-bright">Top-Rated Freelancer</strong>
+                            — 5-star rating on Fiverr, 100% success rate on Upwork.
+                        </span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="text-accent flex-shrink-0 mt-0.5">▹</span>
+                        <span class="text-dim">
+                            <strong class="text-bright">Published Author</strong>
+                            — 30,000+ readers on Medium covering Django, Airflow, and data engineering.
+                        </span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="text-accent flex-shrink-0 mt-0.5">▹</span>
+                        <span class="text-dim">
+                            <strong class="text-bright">Stock Market Tools</strong>
+                            — Built screeners, Discord bots, and trading tools for multiple global exchanges.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-                <!-- About -->
-                <section id="about" class="tab-content active">
-                    <h2 class="section-title"># about_me</h2>
-                    <div class="terminal-box p-6">
-                        <p class="text-muted text-sm mb-3">"""</p>
-                        <p class="text-base mb-3">
-                            I'm a <span class="text-primary font-bold">Software (Data) Engineer</span> focused on
-                            <span class="text-primary">Python, Django, and Cloud (AWS/GCP)</span>.
-                            I build real-time data tools, stock market solutions, and ETL pipelines.
-                        </p>
-                        <p class="text-muted text-sm mb-5">"""</p>
-                        <ul class="space-y-3 text-sm">
-                            <li>
-                                <span class="text-primary">→</span>
-                                <strong class="text-white">Co-founder of <a href="https://meyka.com/"
-                                        class="text-primary hover:underline">Meyka</a></strong>:
-                                AI-powered FinTech SaaS for stock research. Helps users make smart financial decisions.
-                            </li>
-                            <li>
-                                <span class="text-primary">→</span>
-                                <strong class="text-white">Top-Rated Freelancer</strong>:
-                                5-star rating on Fiverr, 100% success on Upwork. Clients keep coming back (I think I
-                                fixed the bug).
-                            </li>
-                            <li>
-                                <span class="text-primary">→</span>
-                                <strong class="text-white">Published Author</strong>:
-                                30,000+ readers on Medium. Topics: Django, Airflow, data engineering.
-                            </li>
-                            <li>
-                                <span class="text-primary">→</span>
-                                <strong class="text-white">Stock Market Tools</strong>:
-                                Built screeners, Discord bots, and tools for multiple stock exchanges.
-                            </li>
-                        </ul>
-                        <p class="text-muted text-xs mt-6 border-t border-line pt-4">
-                            # I post daily on LinkedIn. Connect if you want to grow in tech or need data solutions.
-                        </p>
-                        <p class="text-muted text-xs mt-2">
-                            /* disclaimer: this portfolio was designed by a backend developer. no frontend devs were
-                            harmed. */
-                        </p>
+        <!-- ===== SKILLS ===== -->
+        <section id="skills" class="tab-content hidden">
+            <h2 class="text-xl font-bold text-bright mb-6">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                <div class="bg-surface border border-edge rounded-xl p-5">
+                    <h3 class="text-xs font-semibold text-dim uppercase tracking-wider mb-3">
+                        Languages &amp; Frameworks
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">Django</span>
+                        <span class="skill-badge">Django REST Framework</span>
+                        <span class="skill-badge">React JS</span>
+                        <span class="skill-badge">Langchain</span>
+                        <span class="skill-badge">Flask</span>
+                        <span class="skill-badge">Bootstrap</span>
+                        <span class="skill-badge">Tailwind CSS</span>
                     </div>
-                </section>
+                </div>
 
-                <!-- Skills -->
-                <section id="skills" class="tab-content hidden">
-                    <h2 class="section-title"># technical_skills</h2>
-                    <!-- pip install everything -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-                        <div class="terminal-box p-4">
-                            <p class="text-primary text-sm mb-3">$ cat languages_and_frameworks.txt</p>
-                            <ul class="space-y-1 text-sm">
-                                <li><span class="text-muted">-</span> Python</li>
-                                <li><span class="text-muted">-</span> Django</li>
-                                <li><span class="text-muted">-</span> Django REST Framework</li>
-                                <li><span class="text-muted">-</span> React JS <span class="text-muted text-xs"># frontend, don't ask</span></li>
-                                <li><span class="text-muted">-</span> Langchain</li>
-                                <li><span class="text-muted">-</span> Flask</li>
-                                <li><span class="text-muted">-</span> Bootstrap</li>
-                                <li><span class="text-muted">-</span> Tailwind CSS <span class="text-muted text-xs"># yes, used it here too</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="terminal-box p-4">
-                            <p class="text-primary text-sm mb-3">$ cat cloud_and_devops.txt</p>
-                            <ul class="space-y-1 text-sm">
-                                <li><span class="text-muted">-</span> AWS (EC2, Lightsail, Lambda, CloudWatch, RDS, Glue, S3...)</li>
-                                <li><span class="text-muted">-</span> GCP (Compute Engine, Cloud Run, Cloud SQL, Cloud Functions...)</li>
-                                <li><span class="text-muted">-</span> Azure (VM, Databricks, Blob Storage, Data Factory)</li>
-                                <li><span class="text-muted">-</span> Docker</li>
-                                <li><span class="text-muted">-</span> GitHub Actions</li>
-                            </ul>
-                        </div>
-
-                        <div class="terminal-box p-4">
-                            <p class="text-primary text-sm mb-3">$ cat data_engineering.txt</p>
-                            <ul class="space-y-1 text-sm">
-                                <li><span class="text-muted">-</span> Apache Airflow</li>
-                                <li><span class="text-muted">-</span> ETL Pipelines <span class="text-muted text-xs"># my bread and butter</span></li>
-                                <li><span class="text-muted">-</span> Kafka</li>
-                                <li><span class="text-muted">-</span> PySpark</li>
-                                <li><span class="text-muted">-</span> Snowflake</li>
-                                <li><span class="text-muted">-</span> Fivetran</li>
-                                <li><span class="text-muted">-</span> Data Warehouses &amp; Data Lakes</li>
-                                <li><span class="text-muted">-</span> Data Modeling / Analysis</li>
-                                <li><span class="text-muted">-</span> SSIS</li>
-                            </ul>
-                        </div>
-
-                        <div class="terminal-box p-4">
-                            <p class="text-primary text-sm mb-3">$ cat databases.txt</p>
-                            <ul class="space-y-1 text-sm">
-                                <li><span class="text-muted">-</span> PostgreSQL <span class="text-muted text-xs"># the goat</span></li>
-                                <li><span class="text-muted">-</span> MySQL</li>
-                                <li><span class="text-muted">-</span> MsSQL</li>
-                                <li><span class="text-muted">-</span> MongoDB</li>
-                            </ul>
-                        </div>
-
-                        <div class="terminal-box p-4">
-                            <p class="text-primary text-sm mb-3">$ cat ai_and_ml.txt</p>
-                            <ul class="space-y-1 text-sm">
-                                <li><span class="text-muted">-</span> OpenAI</li>
-                                <li><span class="text-muted">-</span> Gemini</li>
-                                <li><span class="text-muted">-</span> Claude <span class="text-muted text-xs"># helped me write this portfolio</span></li>
-                                <li><span class="text-muted">-</span> NLP / Spacy</li>
-                            </ul>
-                        </div>
-
-                        <div class="terminal-box p-4">
-                            <p class="text-primary text-sm mb-3">$ cat testing_and_practices.txt</p>
-                            <ul class="space-y-1 text-sm">
-                                <li><span class="text-muted">-</span> Unit Testing</li>
-                                <li><span class="text-muted">-</span> Integration Testing</li>
-                                <li><span class="text-muted">-</span> TDD <span class="text-muted text-xs"># I actually do this, unlike most devs</span></li>
-                                <li><span class="text-muted">-</span> Git &amp; GitHub</li>
-                                <li><span class="text-muted">-</span> Web Scraping &amp; Automation</li>
-                            </ul>
-                        </div>
-
+                <div class="bg-surface border border-edge rounded-xl p-5">
+                    <h3 class="text-xs font-semibold text-dim uppercase tracking-wider mb-3">Cloud &amp; DevOps</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">AWS (EC2, Lambda, RDS, S3, Glue...)</span>
+                        <span class="skill-badge">GCP (Compute Engine, Cloud Run...)</span>
+                        <span class="skill-badge">Azure (VM, Databricks, Blob...)</span>
+                        <span class="skill-badge">Docker</span>
+                        <span class="skill-badge">GitHub Actions</span>
                     </div>
-                </section>
+                </div>
 
-                <!-- Experience -->
-                <section id="experience" class="tab-content hidden">
-                    <h2 class="section-title"># experience</h2>
-                    <p class="text-muted text-sm mb-4">$ git log --oneline <span class="text-code"># my career history</span></p>
-                    <div class="space-y-4">
-
-                        <div class="terminal-box p-5">
-                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
-                                <h3 class="text-white font-bold">Technical Co-Founder @ MEYKA PTY LTD</h3>
-                                <span class="text-primary text-xs whitespace-nowrap">Oct 2023 – Present</span>
-                            </div>
-                            <ul class="space-y-2 text-sm">
-                                <li><span class="text-primary">+</span> Built AI-powered stock research chatbot (ChatGPT API) for major international markets.</li>
-                                <li><span class="text-primary">+</span> Led team of 8 — developers and marketers.</li>
-                                <li><span class="text-primary">+</span> Managed GCP cloud infrastructure with 0% downtime.</li>
-                                <li><span class="text-primary">+</span> Built entire backend and fine-tuned ChatGPT to specialize in finance.</li>
-                                <li><span class="text-primary">+</span> Shipped stock screener and price forecasting tools → 2000 monthly users.</li>
-                            </ul>
-                        </div>
-
-                        <div class="terminal-box p-5">
-                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
-                                <h3 class="text-white font-bold">Freelance Software &amp; Data Engineer</h3>
-                                <span class="text-primary text-xs whitespace-nowrap">Feb 2021 – Present</span>
-                            </div>
-                            <ul class="space-y-2 text-sm">
-                                <li><span class="text-primary">+</span> Real-time WhatsApp stock chatbot for Saudi Exchange (OpenAI GPT, 100% uptime on cloud).</li>
-                                <li><span class="text-primary">+</span> Scalable data pipeline on AWS Glue with Python.</li>
-                                <li><span class="text-primary">+</span> Automated transcription of 5TB of video courses → Google Sheets (Deepgram API).</li>
-                                <li><span class="text-primary">+</span> Web scraping + ETL pipelines for various clients.</li>
-                                <li><span class="text-primary">+</span> Stock and crypto screeners with advanced analysis and forecasting.</li>
-                            </ul>
-                        </div>
-
-                        <div class="terminal-box p-5">
-                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
-                                <h3 class="text-white font-bold">Senior Software &amp; Data Engineer @ ML Sense Solutions</h3>
-                                <span class="text-primary text-xs whitespace-nowrap">Dec 2022 – Nov 2023</span>
-                            </div>
-                            <ul class="space-y-2 text-sm">
-                                <li><span class="text-primary">+</span> Streamlined data from multiple sources to warehouses/lakes → 95% accuracy improvement.</li>
-                                <li><span class="text-primary">+</span> Led job analytics platform (scraping + dashboard).</li>
-                                <li><span class="text-primary">+</span> TDD with 90%+ code coverage.</li>
-                                <li><span class="text-primary">+</span> Hired and trained 10+ engineers.</li>
-                            </ul>
-                        </div>
-
-                        <div class="terminal-box p-5">
-                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
-                                <h3 class="text-white font-bold">Technical Team Lead @ Million News Media (PVT) Ltd.</h3>
-                                <span class="text-primary text-xs whitespace-nowrap">Dec 2022 – Jun 2023</span>
-                            </div>
-                            <ul class="space-y-2 text-sm">
-                                <li><span class="text-primary">+</span> Managed 5 developers, improved team efficiency by 30%.</li>
-                                <li><span class="text-primary">+</span> Conducted 50+ interviews, 70% hiring success rate.</li>
-                                <li><span class="text-primary">+</span> Reduced cloud costs by 50%, uptime → 100%.</li>
-                            </ul>
-                        </div>
-
-                        <div class="terminal-box p-5">
-                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
-                                <h3 class="text-white font-bold">Python Developer @ Million News Media (PVT) Ltd.</h3>
-                                <span class="text-primary text-xs whitespace-nowrap">Sep 2020 – Dec 2021</span>
-                            </div>
-                            <ul class="space-y-2 text-sm">
-                                <li><span class="text-primary">+</span> Django-based stock screener with real-time market data insights.</li>
-                                <li><span class="text-primary">+</span> Deployed on AWS and Digital Ocean.</li>
-                                <li><span class="text-primary">+</span> Python automation tools for financial writers and management.</li>
-                            </ul>
-                        </div>
-
-                        <div class="terminal-box p-5">
-                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
-                                <h3 class="text-white font-bold">Frontend Developer @ Hi-Data Technologies</h3>
-                                <span class="text-primary text-xs whitespace-nowrap">Jun 2019 – Jul 2019</span>
-                            </div>
-                            <p class="text-muted text-xs mb-3"># yes I tried frontend once. never again. this is why I'm a backend dev.</p>
-                            <ul class="space-y-2 text-sm">
-                                <li><span class="text-primary">+</span> Bootstrap frontend development.</li>
-                                <li><span class="text-primary">+</span> Adobe Photoshop for graphics and design.</li>
-                            </ul>
-                        </div>
-
+                <div class="bg-surface border border-edge rounded-xl p-5">
+                    <h3 class="text-xs font-semibold text-dim uppercase tracking-wider mb-3">Data Engineering</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Apache Airflow</span>
+                        <span class="skill-badge">ETL Pipelines</span>
+                        <span class="skill-badge">Kafka</span>
+                        <span class="skill-badge">PySpark</span>
+                        <span class="skill-badge">Snowflake</span>
+                        <span class="skill-badge">Fivetran</span>
+                        <span class="skill-badge">Data Warehouses</span>
+                        <span class="skill-badge">Data Lakes</span>
+                        <span class="skill-badge">Data Modeling</span>
+                        <span class="skill-badge">SSIS</span>
                     </div>
-                </section>
+                </div>
 
-                <!-- Portfolio -->
-                <section id="portfolio" class="tab-content hidden">
-                    <h2 class="section-title"># portfolio</h2>
-                    <p class="text-muted text-sm mb-4">// things I actually built (frontend was mostly an accident)</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <!-- generated by popup.js, don't touch -->
+                <div class="bg-surface border border-edge rounded-xl p-5">
+                    <h3 class="text-xs font-semibold text-dim uppercase tracking-wider mb-3">Databases</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">PostgreSQL</span>
+                        <span class="skill-badge">MySQL</span>
+                        <span class="skill-badge">MsSQL</span>
+                        <span class="skill-badge">MongoDB</span>
                     </div>
-                </section>
+                </div>
+
+                <div class="bg-surface border border-edge rounded-xl p-5">
+                    <h3 class="text-xs font-semibold text-dim uppercase tracking-wider mb-3">AI &amp; Machine Learning
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">OpenAI</span>
+                        <span class="skill-badge">Gemini</span>
+                        <span class="skill-badge">Claude</span>
+                        <span class="skill-badge">NLP</span>
+                        <span class="skill-badge">Spacy</span>
+                    </div>
+                </div>
+
+                <div class="bg-surface border border-edge rounded-xl p-5">
+                    <h3 class="text-xs font-semibold text-dim uppercase tracking-wider mb-3">Testing &amp; Practices
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Unit Testing</span>
+                        <span class="skill-badge">Integration Testing</span>
+                        <span class="skill-badge">TDD</span>
+                        <span class="skill-badge">Git &amp; GitHub</span>
+                        <span class="skill-badge">Web Scraping</span>
+                        <span class="skill-badge">Automation</span>
+                    </div>
+                </div>
 
             </div>
-        </main>
-    </div>
+        </section>
+
+        <!-- ===== EXPERIENCE ===== -->
+        <section id="experience" class="tab-content hidden">
+            <h2 class="text-xl font-bold text-bright mb-6">Experience</h2>
+            <div class="space-y-4">
+
+                <!-- Each item: flex row — [dot + line] | [card] -->
+
+                <div class="flex gap-4">
+                    <div class="flex flex-col items-center flex-shrink-0">
+                        <div class="w-3 h-3 rounded-full bg-accent mt-6"></div>
+                        <div class="flex-1 w-px bg-edge mt-2"></div>
+                    </div>
+                    <div class="flex-1 pb-2">
+                        <div class="bg-surface border border-edge rounded-xl p-5">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                                <h3 class="text-bright font-semibold">Technical Co-Founder — MEYKA PTY LTD</h3>
+                                <span
+                                    class="text-accent text-xs font-mono border border-edge px-2 py-1 rounded whitespace-nowrap">Oct
+                                    2023 – Present</span>
+                            </div>
+                            <ul class="space-y-1.5 text-dim text-sm">
+                                <li>▸ Built AI-powered stock research chatbot (ChatGPT API) for major international
+                                    markets.</li>
+                                <li>▸ Led a team of 8 — developers and marketers.</li>
+                                <li>▸ Managed GCP cloud infrastructure with 0% downtime.</li>
+                                <li>▸ Built entire backend and trained ChatGPT to specialize in finance.</li>
+                                <li>▸ Shipped stock screener and price forecasting tools — 2000 monthly users.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex flex-col items-center flex-shrink-0">
+                        <div class="w-3 h-3 rounded-full bg-accent mt-6"></div>
+                        <div class="flex-1 w-px bg-edge mt-2"></div>
+                    </div>
+                    <div class="flex-1 pb-2">
+                        <div class="bg-surface border border-edge rounded-xl p-5">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                                <h3 class="text-bright font-semibold">Freelance Software &amp; Data Engineer</h3>
+                                <span
+                                    class="text-accent text-xs font-mono border border-edge px-2 py-1 rounded whitespace-nowrap">Feb
+                                    2021 – Present</span>
+                            </div>
+                            <ul class="space-y-1.5 text-dim text-sm">
+                                <li>▸ Real-time WhatsApp stock chatbot for Saudi Exchange (OpenAI GPT, 100% uptime).
+                                </li>
+                                <li>▸ Scalable data pipeline on AWS Glue with Python.</li>
+                                <li>▸ Automated transcription of 5TB video courses → Google Sheets (Deepgram API).</li>
+                                <li>▸ Web scraping + ETL pipelines for various clients.</li>
+                                <li>▸ Stock and crypto screeners with analysis and forecasting.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex flex-col items-center flex-shrink-0">
+                        <div class="w-3 h-3 rounded-full bg-accent mt-6"></div>
+                        <div class="flex-1 w-px bg-edge mt-2"></div>
+                    </div>
+                    <div class="flex-1 pb-2">
+                        <div class="bg-surface border border-edge rounded-xl p-5">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                                <h3 class="text-bright font-semibold">Senior Software &amp; Data Engineer — ML Sense
+                                    Solutions</h3>
+                                <span
+                                    class="text-accent text-xs font-mono border border-edge px-2 py-1 rounded whitespace-nowrap">Dec
+                                    2022 – Nov 2023</span>
+                            </div>
+                            <ul class="space-y-1.5 text-dim text-sm">
+                                <li>▸ Streamlined data to warehouses/lakes — 95% accuracy improvement.</li>
+                                <li>▸ Led job analytics platform development (scraping + dashboard).</li>
+                                <li>▸ TDD with 90%+ code coverage.</li>
+                                <li>▸ Hired and trained 10+ software engineers.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex flex-col items-center flex-shrink-0">
+                        <div class="w-3 h-3 rounded-full bg-accent mt-6"></div>
+                        <div class="flex-1 w-px bg-edge mt-2"></div>
+                    </div>
+                    <div class="flex-1 pb-2">
+                        <div class="bg-surface border border-edge rounded-xl p-5">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                                <h3 class="text-bright font-semibold">Technical Team Lead — Million News Media</h3>
+                                <span
+                                    class="text-accent text-xs font-mono border border-edge px-2 py-1 rounded whitespace-nowrap">Dec
+                                    2022 – Jun 2023</span>
+                            </div>
+                            <ul class="space-y-1.5 text-dim text-sm">
+                                <li>▸ Managed 5 developers, improved efficiency by 30%.</li>
+                                <li>▸ Conducted 50+ interviews, 70% hiring success rate.</li>
+                                <li>▸ Reduced cloud costs by 50%, uptime → 100%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex flex-col items-center flex-shrink-0">
+                        <div class="w-3 h-3 rounded-full bg-accent mt-6"></div>
+                        <div class="flex-1 w-px bg-edge mt-2"></div>
+                    </div>
+                    <div class="flex-1 pb-2">
+                        <div class="bg-surface border border-edge rounded-xl p-5">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                                <h3 class="text-bright font-semibold">Python Developer — Million News Media</h3>
+                                <span
+                                    class="text-accent text-xs font-mono border border-edge px-2 py-1 rounded whitespace-nowrap">Sep
+                                    2020 – Dec 2021</span>
+                            </div>
+                            <ul class="space-y-1.5 text-dim text-sm">
+                                <li>▸ Django-based stock screener with real-time market data insights.</li>
+                                <li>▸ Deployed on AWS and Digital Ocean.</li>
+                                <li>▸ Python automation tools for financial writers and management.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Last item — no line below -->
+                <div class="flex gap-4">
+                    <div class="flex flex-col items-center flex-shrink-0">
+                        <div class="w-3 h-3 rounded-full bg-dim mt-6"></div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="bg-surface border border-edge rounded-xl p-5">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                                <h3 class="text-bright font-semibold">Frontend Developer — Hi-Data Technologies</h3>
+                                <span
+                                    class="text-dim text-xs font-mono border border-edge px-2 py-1 rounded whitespace-nowrap">Jun
+                                    2019 – Jul 2019</span>
+                            </div>
+                            <ul class="space-y-1.5 text-dim text-sm">
+                                <li>▸ Bootstrap frontend development.</li>
+                                <li>▸ Adobe Photoshop for graphics and design.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== PORTFOLIO ===== -->
+        <section id="portfolio" class="tab-content hidden">
+            <h2 class="text-xl font-bold text-bright mb-6">Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- populated by popup.js -->
+            </div>
+        </section>
+
+    </main>
 
     <!-- Popup overlay -->
-    <div id="popup-overlay" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
-        <div id="popup-content" class="bg-light border border-line p-8 max-w-2xl w-full mx-4 max-h-screen overflow-y-auto">
-            <button id="close-popup" class="float-right text-primary font-bold text-sm">[x close]</button>
+    <div id="popup-overlay" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50 p-4">
+        <div id="popup-content"
+            class="bg-surface border border-edge rounded-xl p-6 max-w-2xl w-full max-h-screen overflow-y-auto">
+            <div class="flex items-center justify-between mb-5">
+                <span class="text-dim text-xs font-mono">Project Details</span>
+                <button id="close-popup"
+                    class="text-dim hover:text-bright transition-colors text-2xl leading-none">&times;</button>
+            </div>
             <div id="popup-details"></div>
         </div>
     </div>

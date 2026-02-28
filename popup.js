@@ -427,14 +427,14 @@ document.addEventListener('DOMContentLoaded', function () {
         let portfolioHTML = '';
         for (const [id, project] of Object.entries(projectDetails)) {
             portfolioHTML += `
-                <div class="terminal-box overflow-hidden">
+                <div class="bg-surface border border-edge rounded-xl overflow-hidden hover:border-accent transition-colors">
                     <img loading="lazy" src="${project.image}" alt="${project.title}" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-sm font-bold mb-2 text-white">${project.title}</h3>
-                        <p class="mb-3 text-xs text-code">${project.shortDescription}</p>
+                    <div class="p-5">
+                        <h3 class="text-bright font-semibold mb-2">${project.title}</h3>
+                        <p class="text-dim text-sm mb-4 leading-relaxed">${project.shortDescription}</p>
                         ${project.link
-                    ? `<a href="${project.link}" target="_blank" class="text-primary hover:underline text-xs">[view project →]</a>`
-                    : `<button class="text-primary hover:underline open-popup text-xs" data-project="${id}">[view details →]</button>`
+                    ? `<a href="${project.link}" target="_blank" class="text-accent hover:underline text-sm font-medium">View Project →</a>`
+                    : `<button class="text-accent hover:underline text-sm font-medium open-popup" data-project="${id}">View Details →</button>`
                 }
                     </div>
                 </div>
@@ -447,12 +447,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const project = projectDetails[projectId];
         if (project && !project.link) {
             let content = `
-                <p class="text-muted text-xs mb-1">/* project details */</p>
-                <h2 class="text-lg font-bold mb-4 text-primary">${project.title}</h2>
+                <h2 class="text-xl font-bold text-bright mb-2">${project.title}</h2>
                 <div class="popup-scroll-content">
-                    <div class="text-sm mb-4 text-code">${project.longDescription}</div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                        ${project.images.map(img => `<a href="${img}" target="_blank"><img loading="lazy" src="${img}" alt="${project.title}" class="w-full border border-line"></a>`).join('')}
+                    <div class="text-dim text-sm leading-relaxed mb-5">${project.longDescription}</div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        ${project.images.map(img => `<a href="${img}" target="_blank"><img loading="lazy" src="${img}" alt="${project.title}" class="w-full rounded-lg border border-edge"></a>`).join('')}
                     </div>
                 </div>
             `;
