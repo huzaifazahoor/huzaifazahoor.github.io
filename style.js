@@ -127,59 +127,6 @@ document.addEventListener('DOMContentLoaded', function () {
         fadeEls.forEach(function (el) { el.classList.add('visible'); });
     }
 
-    /* ---- Contact form (collect only, no send yet) ---- */
-    const form = document.getElementById('contact-form');
-    const note = document.getElementById('form-note');
-    const submitBtn = document.getElementById('submit-btn');
-
-    if (form) {
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const name = form.querySelector('#name').value.trim();
-            const email = form.querySelector('#email').value.trim();
-            const budget = form.querySelector('#budget').value;
-            const description = form.querySelector('#description').value.trim();
-
-            note.classList.remove('error');
-
-            if (!name || !email || !budget || !description) {
-                note.textContent = 'Please fill in all required fields.';
-                note.classList.add('error');
-                return;
-            }
-
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(email)) {
-                note.textContent = 'Please enter a valid email address.';
-                note.classList.add('error');
-                return;
-            }
-
-            // Collect form data (email sending will be wired up later via SMTP)
-            const data = {
-                name: name,
-                email: email,
-                budget: budget,
-                description: description,
-                heard: form.querySelector('#heard').value || 'not specified',
-                submitted_at: new Date().toISOString()
-            };
-
-            console.log('Form submission (SMTP not wired yet):', data);
-
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sent!';
-            note.textContent = 'Thanks! I will get back to you within 24 hours.';
-            form.reset();
-
-            setTimeout(function () {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Send Message';
-            }, 4000);
-        });
-    }
-
     /* ---- Active nav link style ---- */
     const style = document.createElement('style');
     style.textContent = '.nav-link.active { color: var(--navy); background: var(--edge-light); }';

@@ -1344,3 +1344,7 @@ footer {
     color: var(--green-mid);
     font-weight: 400;
 }
+
+.contact-section::before {
+    pointer-events: none;
+}

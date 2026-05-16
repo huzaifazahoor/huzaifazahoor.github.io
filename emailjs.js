@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
 
-        emailjs.send('service_lwwwte8', '6krj3xc', {
+        emailjs.send('service_lwwwte8', 'template_ew9xmho', {
             name: name,
             email: email,
             budget: budget,
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
             submitBtn.textContent = 'Send Message';
         }).catch(function (err) {
             console.error('EmailJS error:', err);
-            note.textContent = 'Something went wrong. Please email me directly.';
+            note.textContent = 'Something went wrong. Please email me directly at huzaifazahoor654@gmail.com.';
             note.classList.add('error');
             submitBtn.disabled = false;
             submitBtn.textContent = 'Send Message';
