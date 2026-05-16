@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -156,6 +158,7 @@
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#portfolio" class="nav-link">Portfolio</a>
                 <a href="#about" class="nav-link">About</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
                 <a href="#contact" class="nav-cta">Hire Me</a>
             </div>
             <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
@@ -166,6 +169,7 @@
             <a href="#services" class="mobile-link">Services</a>
             <a href="#portfolio" class="mobile-link">Portfolio</a>
             <a href="#about" class="mobile-link">About</a>
+            <a href="#reviews" class="mobile-link">Reviews</a>
             <a href="#contact" class="mobile-link mobile-cta">Hire Me</a>
         </div>
     </nav>
@@ -354,7 +358,58 @@
                     <p class="section-desc">Real products I built for real clients. Most are live and in use today.</p>
                 </div>
                 <div class="portfolio-grid" id="portfolio-grid">
-                    <!-- Populated by popup.js -->
+                    {% for project in site.data.projects %}
+                    <article class="portfolio-card fade-up" role="article">
+                        <img loading="lazy" src="{{ project.image }}" alt="{{ project.title }}" width="400"
+                            height="190" />
+                        <div class="portfolio-card-body">
+                            <h3 class="portfolio-card-title">{{ project.title }}</h3>
+                            <p class="portfolio-card-desc">{{ project.desc }}</p>
+                            {% if project.link %}
+                            {% if project.link contains 'meyka.com' %}
+                            <a href="{{ project.link }}" target="_blank" rel="noopener" class="portfolio-card-link">View
+                                Live →</a>
+                            {% else %}
+                            <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer nofollow"
+                                class="portfolio-card-link">View Live →</a>
+                            {% endif %}
+                            {% else %}
+                            <button class="portfolio-card-link open-popup-btn" data-id="{{ project.id }}">View Details
+                                →</button>
+                            {% endif %}
+                        </div>
+                    </article>
+
+                    {% unless project.link %}
+                    <div id="popup-{{ project.id }}" class="popup-overlay" hidden>
+                        <div class="popup-box">
+                            <div class="popup-top">
+                                <span class="popup-label">Project Details</span>
+                                <button class="popup-close" onclick="closePopup('{{ project.id }}')">&times;</button>
+                            </div>
+                            <div class="popup-details">
+                                <h2>{{ project.title }}</h2>
+                                <p>{{ project.long_desc }}</p>
+                                {% if project.features %}
+                                <ol>
+                                    {% for feature in project.features %}
+                                    <li>{{ feature }}</li>
+                                    {% endfor %}
+                                </ol>
+                                {% endif %}
+                                {% if project.images %}
+                                <div class="popup-images-grid">
+                                    {% for img in project.images %}
+                                    <a href="{{ img }}" target="_blank" rel="noopener"><img loading="lazy"
+                                            src="{{ img }}" alt="{{ project.title }}" /></a>
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endunless %}
+                    {% endfor %}
                 </div>
             </div>
         </section>
@@ -497,6 +552,35 @@
                             </ul>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REVIEWS -->
+        <section id="reviews" class="section" aria-labelledby="reviews-heading">
+            <div class="section-inner">
+                <div class="section-header">
+                    <span class="section-tag">Client Reviews</span>
+                    <h2 id="reviews-heading" class="section-title">What Clients Say</h2>
+                    <p class="section-desc">40+ verified reviews from clients across the US, UK, Canada, Germany, Nepal, and more. Every single one is 5 stars.</p>
+                </div>
+                <div class="reviews-grid">
+                    {% for review in site.data.reviews %}
+                    <div class="review-card fade-up">
+                        <div class="review-top">
+                            <div class="review-avatar">{{ review.username | slice: 0 | upcase }}</div>
+                            <div class="review-meta">
+                                <span class="review-username">{{ review.username }}</span>
+                                <span class="review-country">{{ review.country }}</span>
+                            </div>
+                            <span class="review-platform">{{ review.platform }}</span>
+                        </div>
+                        <div class="review-stars">
+                            {% for i in (1..review.stars) %}★{% endfor %}
+                        </div>
+                        <p class="review-text">{{ review.review }}</p>
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>

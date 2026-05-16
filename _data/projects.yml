@@ -1,0 +1,238 @@
+- id: meyka
+  title: "Meyka — AI Stock Research Platform"
+  desc: "An AI-powered stock research tool that helps investors make better decisions. Covers major global markets."
+  image: "portfolio_images/about_meyka.webp"
+  link: "https://meyka.com/"
+
+- id: topchor
+  title: "Topchor — NGX Stock Screener"
+  desc: "A full stock screener for the Nigerian Exchange Group. Covers 145+ stocks with 20+ filters, technical indicators, watchlists, and daily market signals."
+  image: "portfolio_images/topchor.webp"
+  link: "https://topchor.com/"
+
+- id: nepse-research
+  title: "NEPSE Research"
+  desc: "Full stock market tool for Nepal. Includes a screener, candlestick pattern detection, and chart pattern analysis."
+  image: "portfolio_images/nepse-research.webp"
+  link: "https://nepseresearch.com"
+
+- id: bravo-scan
+  title: "Bravo Scan — US Market Screener"
+  desc: "US market screener with technical indicators, custom filters, and advanced market insights."
+  image: "portfolio_images/bravo-scan.webp"
+  link: "https://bravo-scan.com"
+
+- id: salary-scout
+  title: "SalaryScout"
+  desc: "A salary research tool that collects and shows developer salary data across the tech industry."
+  image: "portfolio_images/SalaryScout.webp"
+  link: "https://salary-scout.com/"
+
+- id: task-earn
+  title: "Task Earn"
+  desc: "A platform that connects users with task-based earning opportunities using AI-powered matching."
+  image: "portfolio_images/task-earn.webp"
+  link: "https://taskearn.app/"
+
+- id: murat-stock-screener
+  title: "Custom EMA/SMA Stock Screener"
+  desc: "A screener that finds stocks based on EMA(15) crossing SMA(30), with RSI, saved lists, and real-time data."
+  image: "portfolio_images/murat-stock-screener1.webp"
+  long_desc: "Built for a private client. Finds stocks where EMA(15) crosses SMA(30) and tracks direction after the crossover."
+  features:
+    - "EMA/SMA crossover scanner as the core filter."
+    - "Save and manage custom stock lists."
+    - "Multi-symbol search separated by commas."
+    - "Real-time RSI(14), price, and change data."
+    - "Filtering by timeframe (1 Day)."
+  images:
+    - "portfolio_images/murat-stock-screener1.webp"
+    - "portfolio_images/murat-stock-screener2.webp"
+
+- id: yahoo-technical-stock-screener
+  title: "Technical Stock Screener"
+  desc: "A full-featured screener with technical indicators, sector filters, sentiment scores, and export tools."
+  image: "portfolio_images/yahoo-technical-stock-screener.webp"
+  long_desc: "A Yahoo Finance-style screener built for a private client. Lets traders filter stocks across multiple markets."
+  features:
+    - "Filters by sector, price, volume, market cap, CCI, RV, AO, MFI, and Stockscores."
+    - "Real-time prices and trading data."
+    - "Sentiment and signal scores."
+    - "Saved filter lists and custom views."
+    - "Export to CSV for further analysis."
+  images:
+    - "portfolio_images/yahoo-technical-stock-screener.webp"
+
+- id: private-client-canada
+  title: "Private Stock Scanner — Canada"
+  desc: "Custom stock scanner with daily reports built around a unique percentage-increase strategy for a Canadian client."
+  image: "portfolio_images/1 - home1.webp"
+  long_desc: "Built for a Canada-based client using their API and custom strategy."
+  features:
+    - "Custom price-increase calculation using client's strategy."
+    - "Scanner with price and percentage filters."
+    - "Automated daily reports."
+    - "Clean, easy-to-use interface."
+  images:
+    - "portfolio_images/1 - home1.webp"
+    - "portfolio_images/1 - StockHistoricalPage.webp"
+    - "portfolio_images/1 - home.webp"
+    - "portfolio_images/1 - screener.webp"
+    - "portfolio_images/1 - StockDetailPage.webp"
+
+- id: dividend-calculator
+  title: "Dividend Calculator Web App — Canada"
+  desc: "Turned a client spreadsheet into a full web app with dividend calculations, watchlists, screeners, and portfolios."
+  image: "portfolio_images/2 - DividendCalculator - Portfolio.webp"
+  long_desc: "Built for a Canada-based client who wanted their spreadsheet logic as a fast web app."
+  features:
+    - "Exact replication of spreadsheet dividend calculations."
+    - "Watchlists, screener, portfolio management, and summary tabs."
+    - "Fast, smooth interface."
+    - "Design aligned with the client's requirements."
+  images:
+    - "portfolio_images/2 - DividendCalculator - Portfolio.webp"
+    - "portfolio_images/2 - DividendCalculator - WatchList.webp"
+    - "portfolio_images/2 - Dividend Calculator - DataBank.webp"
+    - "portfolio_images/2 - DividendCalculator - Summary.webp"
+
+- id: options-screener
+  title: "Private Options Screener"
+  desc: "Options screener built from a client-provided design and API. I built the full backend and integrated everything."
+  image: "portfolio_images/3 - RH Screener.webp"
+  long_desc: "The client provided the design and API templates. I built the backend and wired it all together."
+  features:
+    - "Custom backend for options screening logic."
+    - "Integration of provided design and API."
+    - "Clean, efficient performance."
+  images:
+    - "portfolio_images/3 - RH Screener.webp"
+    - "portfolio_images/3 - RH Options.webp"
+
+- id: us-exchange-screener
+  title: "US Exchange Screener with Portfolio Management"
+  desc: "US stock screener with portfolio management, market movers, top gainers, top losers, and most active."
+  image: "portfolio_images/4 - AI - Home.webp"
+  long_desc: "Built for a private client with specific feature requirements."
+  features:
+    - "US exchange stock screener."
+    - "Portfolio management with a 4-portfolio-per-user limit."
+    - "Market movers: top gainers, top losers, most active."
+    - "Smooth user experience built to the client's specs."
+  images:
+    - "portfolio_images/4 - AI - Home.webp"
+    - "portfolio_images/4 - AI - Screener.webp"
+
+- id: finviz-style-screener
+  title: "Finviz-Style Screener & Scanner"
+  desc: "A Finviz-style screener with custom filters on a proprietary database, kept fresh by scheduled update jobs."
+  image: "portfolio_images/5. TG.webp"
+  long_desc: "Modeled after Finviz but running on the client's own database."
+  features:
+    - "Screener and scanner with custom filters."
+    - "Proprietary database as the data source."
+    - "Scheduled programs to keep the database updated."
+    - "Clean interface for fast screening."
+  images:
+    - "portfolio_images/5. TG.webp"
+
+- id: signal-generator-stock-crypto
+  title: "Signal Generator — Stocks & Crypto"
+  desc: "Real-time buy and warning signal generator for stock and crypto markets. Uses client-provided API and technical indicators."
+  image: "portfolio_images/6. AT-Crypto.webp"
+  long_desc: "Built for a private client who needed signals in both stock and crypto markets."
+  features:
+    - "Buy and warning signal generation."
+    - "Real-time data from client-provided API."
+    - "Technical indicator calculations."
+    - "Reliable and accurate signal delivery."
+  images:
+    - "portfolio_images/6. AT-Crypto.webp"
+    - "portfolio_images/6. AT-Stocks.webp"
+
+- id: us-stock-market-screener
+  title: "Yahoo Finance-Style US Screener"
+  desc: "Full-featured US market screener with subscriptions, quote pages, TradingView charts, and market movers dashboard."
+  image: "portfolio_images/7. Ryan-QuotePage.webp"
+  long_desc: "A Yahoo Finance-inspired platform for US stock market analysis."
+  features:
+    - "Subscription plans with tiered access."
+    - "Quote pages with detailed stock data."
+    - "Fundamental data and custom charts."
+    - "TradingView integration."
+    - "Market movers: top gainers, losers, most active."
+  images:
+    - "portfolio_images/7. Ryan-QuotePage.webp"
+    - "portfolio_images/7. Ryan-Screener.webp"
+    - "portfolio_images/7. Ryan-Home.webp"
+    - "portfolio_images/7. Ryan-Pricing.webp"
+
+- id: wordpress-discord-alerts
+  title: "WordPress + Discord Stock Alerts"
+  desc: "Added insider transactions, upgrades, downgrades, and filters to a WordPress site. Auto-sends alerts to Discord channels."
+  image: "portfolio_images/8. H-Insider Transactions.webp"
+  long_desc: "Added functionality to an existing WordPress site to generate and push stock alerts."
+  features:
+    - "Insider trading data, upgrades, and downgrades."
+    - "Custom filters for alert conditions."
+    - "Shortcodes for easy WordPress integration."
+    - "Automatic alert delivery to Discord channels."
+  images:
+    - "portfolio_images/8. H-Insider Transactions.webp"
+    - "portfolio_images/8. H-Upgrades-Downgrades.webp"
+    - "portfolio_images/8. H-Alerts.webp"
+
+- id: finviz-crypto-screener
+  title: "Finviz-Style Crypto Screener + Discord Alerts"
+  desc: "Crypto screener with scanner, quote page, charts, coin comparison, scoring, and automated Discord community alerts."
+  image: "portfolio_images/10. A-Coin-Overview.webp"
+  long_desc: "A full crypto screening platform with community alert features."
+  features:
+    - "Coin scanner with custom filters."
+    - "Detailed quote page per coin."
+    - "Custom charts and coin comparison tool."
+    - "Coin scoring system."
+    - "Automated Discord alerts based on conditions."
+  images:
+    - "portfolio_images/10. A-Coin-Overview.webp"
+    - "portfolio_images/10. A-Screener.webp"
+    - "portfolio_images/10. A-Coin-Profile.webp"
+    - "portfolio_images/10. A-Coin-Twitter.webp"
+
+- id: finviz-stock-screener-discord
+  title: "Finviz-Style Stock Screener + Discord Alerts"
+  desc: "Full stock screener with scanner, quote page, comparison tool, scoring system, and Discord community alerts."
+  image: "portfolio_images/11. TL - InsiderBot.webp"
+  long_desc: "Another Finviz-inspired screener built for a client with an active Discord community."
+  features:
+    - "Stock scanner with filter controls."
+    - "Quote page with full stock details."
+    - "Stock comparison feature."
+    - "Custom scoring and ranking system."
+    - "Automated Discord alert integration."
+  images:
+    - "portfolio_images/11. TL - InsiderBot.webp"
+    - "portfolio_images/11. TLI - Screener.webp"
+    - "portfolio_images/11. TL - SocialMediaBot.webp"
+    - "portfolio_images/11. TL - VolumeMonitorBot.webp"
+    - "portfolio_images/11. TLI - Comparasion.webp"
+    - "portfolio_images/11. TLI - Quote.webp"
+
+- id: social-media-stock-sentiment
+  title: "Social Media Stock Sentiment Tool"
+  desc: "Pulls trending stock posts from Twitter, StockTwits, and Reddit, runs sentiment analysis, and shows results per ticker."
+  image: "portfolio_images/12. F - Quote Page.webp"
+  long_desc: "A social media and sentiment platform for stock traders."
+  features:
+    - "Twitter, StockTwits, and Reddit integration."
+    - "Finviz API for news data."
+    - "Machine learning sentiment analysis model."
+    - "Sentiment bar chart on each ticker's quote page."
+    - "Subscription system for alerts and updates."
+  images:
+    - "portfolio_images/12. F - Quote Page.webp"
+    - "portfolio_images/12. F - Social Trending Stocks.webp"
+    - "portfolio_images/12. F - Home.webp"
+    - "portfolio_images/12. F - News.webp"
+    - "portfolio_images/12. F - Social Media Posts.webp"
+    - "portfolio_images/12. F - Screener.webp"
