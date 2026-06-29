@@ -13,8 +13,8 @@
 
   window.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll(SELECTORS).forEach(el => {
-      const original = el.innerHTML;
-      el.innerHTML = original.replace(/(\S+)/g, '<span class="aw" style="display:inline-block">$1</span>');
+      if (el.querySelector('a, strong, em, span')) return; // skip if has child tags
+      el.innerHTML = el.innerHTML.replace(/(\S+)/g, '<span class="aw" style="display:inline-block">$1</span>');
     });
 
     document.querySelectorAll('.aw').forEach(el => {
