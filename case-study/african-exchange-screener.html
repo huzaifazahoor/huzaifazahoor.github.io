@@ -1,0 +1,90 @@
+---
+layout: default
+title: "Case Study: Stock Screener for an African Exchange — 148 Stocks, $0 Data Cost | Huzaifa Zahoor"
+description: "How I built a full stock screener for an African stock exchange in 3 weeks using Python, Django, and free public data. 148 stocks, RSI and MACD from scratch, 33 SEO signal pages, under $40/month to run."
+keywords: "stock screener case study, ngx stock screener, build stock screener python, django stock screener, african stock exchange screener"
+permalink: /case-study/african-exchange-screener/
+schema: >
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Case Study: Stock Screener for an African Exchange with Zero Data Cost",
+    "author": { "@id": "https://huzaifazahoor.online/#person" },
+    "url": "https://huzaifazahoor.online/case-study/african-exchange-screener/"
+  }
+---
+
+<section class="section" aria-labelledby="page-heading">
+    <div class="section-inner">
+        <div class="section-header">
+            <span class="section-tag">Case Study</span>
+            <h1 id="page-heading" class="section-title">Stock Screener for an African Exchange</h1>
+            <p class="section-desc">148 stocks. Daily technical indicators. 33 signal pages.
+                Zero dollars in data costs. Built in three weeks.</p>
+        </div>
+
+        <div class="hero-stats" style="margin-bottom:40px;">
+            <div class="stat"><span class="stat-num">148</span><span class="stat-label">Stocks Tracked</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">3</span><span class="stat-label">Weeks to Ship</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">$0</span><span class="stat-label">Data Cost</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">&lt;$40</span><span class="stat-label">Monthly Infra</span></div>
+        </div>
+
+        <h2 class="section-title" style="font-size:1.5rem;">The problem</h2>
+        <p class="about-para">
+            A client found me on Fiverr. He wanted a stock screener for an African stock exchange
+            where investors could filter by price, volume, dividends, and technical indicators.
+            The catch: no budget for paid data feeds. No Bloomberg. No paid API subscriptions.
+            The exchange itself had no official public API, no developer portal, and no documentation.
+        </p>
+
+        <h2 class="section-title" style="font-size:1.5rem; margin-top:40px;">Finding data that "did not exist"</h2>
+        <p class="about-para">
+            I watched the exchange website's network requests in browser dev tools and found a hidden
+            REST endpoint returning daily OHLCV data for all 148 stocks in one request. Historical
+            prices came from an undocumented chart widget endpoint, keyed by internal ISIN codes that
+            I had to scrape from 148 company profile pages. Fundamentals like P/E and dividend yield
+            did not exist on the exchange at all, so I pulled them from a third-party site where the
+            data was buried inside a JavaScript bundle. Four sources, four formats, four parsers.
+        </p>
+
+        <h2 class="section-title" style="font-size:1.5rem; margin-top:40px;">The build</h2>
+        <ul class="timeline-list" style="margin-top:16px;">
+            <li>Seven independent Python scripts, each doing one job: prices, history backfill, ISIN mapping, indicators, company profiles, fundamentals, and news matching.</li>
+            <li>RSI, MACD, and five moving averages written from scratch in about 80 lines of plain Python, avoiding TA-Lib's C compilation headaches on serverless.</li>
+            <li>A 0-100 opportunity score per stock, built on trend, momentum, volume, price action, and relative strength.</li>
+            <li>33 SEO signal pages (Top Gainers, RSI Oversold, Golden Cross, and more) generated from one Django view and one config dictionary.</li>
+            <li>A screener with 15+ combinable filters, null-safe sorting, and clean URLs.</li>
+        </ul>
+
+        <h2 class="section-title" style="font-size:1.5rem; margin-top:40px;">Infrastructure</h2>
+        <p class="about-para">
+            Django on Google Cloud Run, data scripts as Cloud Functions on Cloud Scheduler, and
+            PostgreSQL on Supabase. Scripts run hourly during market hours in the exchange's timezone.
+            Total running cost: under $40 per month for a platform updating 148 stocks every hour.
+        </p>
+
+        <h2 class="section-title" style="font-size:1.5rem; margin-top:40px;">Honest lessons</h2>
+        <p class="about-para">
+            Not everything went smoothly, and I would rather tell you than hide it. The MACD math had
+            an EMA alignment bug that took two hours to find. The scraper broke once because the source
+            site A/B tests its layout. And if I started over, I would backfill historical data on day
+            one, because indicators like the 200-day moving average sat empty for the first month.
+            These are exactly the lessons you are paying for when you hire a specialist.
+        </p>
+
+        <p class="about-para">
+            Want the full technical breakdown?
+            <a href="https://medium.com/@huzaifazahoor654" target="_blank" rel="noopener" class="inline-link">
+            Read the complete write-up on Medium</a>.
+        </p>
+
+        <div class="hero-actions" style="margin-top:32px;">
+            <a href="/stock-screener-development/" class="btn-secondary">Stock Screener Service</a>
+            <a href="/#contact" class="btn-primary">Build Yours</a>
+        </div>
+    </div>
+</section>

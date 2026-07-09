@@ -1,0 +1,13 @@
+url: "https://huzaifazahoor.online"
+title: "Huzaifa Zahoor — Stock Market Developer"
+
+# Auto-generates sitemap.xml on every build. Delete your manual sitemap.xml.
+# Works out of the box on GitHub Pages.
+plugins:
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

@@ -1,0 +1,93 @@
+---
+layout: default
+title: "Case Study: Technical Stock Screener Tracking 900+ Stocks | Huzaifa Zahoor"
+description: "How I built a custom stock screener tracking 900+ stocks with RS Rating, Wave indicators, and buy/sell signals. Full refresh in under 10 minutes, 99%+ uptime with a multi-API fallback."
+keywords: "technical stock screener case study, rs rating screener, custom stock screener development, wave indicator screener, django stock screener"
+permalink: /case-study/technical-stock-screener-900-stocks/
+schema: >
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Case Study: Technical Stock Screener Tracking 900+ Stocks with Custom Indicators",
+    "author": { "@id": "https://huzaifazahoor.online/#person" },
+    "url": "https://huzaifazahoor.online/case-study/technical-stock-screener-900-stocks/"
+  }
+---
+
+<section class="section" aria-labelledby="page-heading">
+    <div class="section-inner">
+        <div class="section-header">
+            <span class="section-tag">Case Study</span>
+            <h1 id="page-heading" class="section-title">Technical Screener for 900+ Stocks</h1>
+            <p class="section-desc">A client needed to track 900 stocks with indicators no standard
+                screening tool offered. I built it from scratch.</p>
+        </div>
+
+        <div class="hero-stats" style="margin-bottom:40px;">
+            <div class="stat"><span class="stat-num">900+</span><span class="stat-label">Stocks Tracked</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">&lt;10min</span><span class="stat-label">Full Refresh</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">99%+</span><span class="stat-label">Uptime</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">0.01%</span><span class="stat-label">Indicator Variance</span>
+            </div>
+        </div>
+
+        <h2 class="section-title" style="font-size:1.5rem;">The problem</h2>
+        <p class="about-para">
+            The client's strategy used RS Rating, custom Wave indicators, and Delta values. No
+            off-the-shelf screener calculated them. They needed all three across 900 stocks, updated
+            on demand, with free-tier data APIs capped at 250-500 calls per day. Three hard problems:
+            getting the data, doing the math, and keeping everything fresh without manual work.
+        </p>
+
+        <h2 class="section-title" style="font-size:1.5rem; margin-top:40px;">The data solution</h2>
+        <p class="about-para">
+            One API was not enough, so I built a multi-API fallback. Financial Modeling Prep runs
+            first because it is faster. When it hits its daily limit or returns rate-limit errors,
+            the system automatically switches to Twelve Data. The result: 99%+ uptime, because when
+            one source fails, the other takes over without anyone noticing.
+        </p>
+
+        <h2 class="section-title" style="font-size:1.5rem; margin-top:40px;">The indicators</h2>
+        <ul class="timeline-list" style="margin-top:16px;">
+            <li>RS Rating (1-99): each stock's performance weighed against the S&P 500 across four quarters, with the
+                most recent quarter weighted 40%.</li>
+            <li>Wave indicators: momentum built from layered EMAs over HLC3 prices, producing Fast Wave, Slow Wave, and
+                Delta.</li>
+            <li>Buy and sell signals generated on Fast/Slow Wave crossovers, shown with color coding so traders scan
+                hundreds of stocks in seconds.</li>
+            <li>Accuracy verified against professional platforms within 0.01% variance.</li>
+        </ul>
+
+        <h2 class="section-title" style="font-size:1.5rem; margin-top:40px;">Built for scale</h2>
+        <p class="about-para">
+            Processing 900 stocks one by one would take hours, so the system works in batches of 100
+            with single bulk upserts into PostgreSQL, updating hundreds of records in milliseconds.
+            Heavy calculations run in Google Cloud Functions that scale up during refreshes and cost
+            nothing when idle. Database indexing and query optimization cut database calls by 900x.
+            Individual stock updates finish in 2-3 seconds, and a full 900-stock refresh completes in
+            under 10 minutes.
+        </p>
+
+        <h2 class="section-title" style="font-size:1.5rem; margin-top:40px;">The result</h2>
+        <p class="about-para">
+            Traders filter a 900-stock universe down to 10-20 candidates in seconds using stacked
+            filters: RS Rating range, wave values, Delta, price bands, and signals, all working
+            together. Bulk operations let the client add, refresh, or delete stocks in one click.
+            The stack: Python, Django, PostgreSQL, Google Cloud Functions, Pandas, and Tailwind.
+        </p>
+
+        <p class="about-para">
+            Want the full technical breakdown with code?
+            <a href="https://medium.com/@huzaifazahoor654" target="_blank" rel="noopener" class="inline-link">
+                Read the complete write-up on Medium</a>.
+        </p>
+
+        <div class="hero-actions" style="margin-top:32px;">
+            <a href="/stock-screener-development/" class="btn-secondary">Stock Screener Service</a>
+            <a href="/#contact" class="btn-primary">Build Yours</a>
+        </div>
+    </div>
+</section>
