@@ -10,6 +10,20 @@
   image: "portfolio_images/topchor.webp"
   link: "https://topchor.com/"
 
+- id: community-options-screener
+  title: "Real-Time Options Screener for a Trading Community"
+  desc: "Private options screener tracking 1,300+ stocks with ATR, spread, open interest, and relative volume filters. Updates every 15 minutes."
+  image: "portfolio_images/larry-jones-options-screener.webp"
+  long_desc: "Built for a paying trading community. Scans 1,300+ stocks and ranks options setups using the filters that matter most to options traders."
+  features:
+    - "Three scan modes: Large Cap, Mid Cap, and Mag 7 ranked by ATR."
+    - "Filters for ATR, bid/ask spread, relative volume, open interest, and price."
+    - "Session presets: Morning Momentum, Wide Net, and Sniper."
+    - "Options data refresh every 15 minutes during market hours."
+    - "Export scans as CSV or markdown for AI analysis."
+  images:
+    - "portfolio_images/larry-jones-options-screener.webp"
+
 - id: nepse-research
   title: "NEPSE Research"
   desc: "Full stock market tool for Nepal. Includes a screener, candlestick pattern detection, and chart pattern analysis."

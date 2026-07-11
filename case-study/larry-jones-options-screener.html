@@ -1,0 +1,101 @@
+---
+layout: default
+title: "Case Study: Private Real-Time Options Screener for a Trading Community | Huzaifa Zahoor"
+description: "How I built a private real-time options screener tracking 1,300+ stocks with open interest, spread, relative volume, and ATR filters. Options data refreshed every 15 minutes, shipped in 6 weeks."
+keywords: "options screener case study, real time options screener, custom options screener development, atr screener, options trading tool development"
+permalink: /case-study/larry-jones-options-screener/
+schema: >
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Case Study: Private Real-Time Options Screener for a Trading Community",
+    "author": { "@id": "https://huzaifazahoor.online/#person" },
+    "url": "https://huzaifazahoor.online/case-study/larry-jones-options-screener/"
+  }
+---
+
+<section class="section" aria-labelledby="page-heading">
+    <div class="section-inner">
+        <div class="section-header">
+            <span class="section-tag">Case Study</span>
+            <h1 id="page-heading" class="section-title">Real-Time Options Screener for a Trading Community</h1>
+            <p class="section-desc">A paying trading community needed one place to find options setups
+                fast. No existing screener had the right filters. I built it in six weeks.</p>
+        </div>
+
+        <div class="hero-stats" style="margin-bottom:40px;">
+            <div class="stat"><span class="stat-num">1,300+</span><span class="stat-label">Stocks Tracked</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">15min</span><span class="stat-label">Data Refresh</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">6</span><span class="stat-label">Weeks to Ship</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">6x</span><span class="stat-label">Faster Updates</span></div>
+        </div>
+
+        <h2 class="section-title" style="font-size:1.5rem;">The problem</h2>
+        <p class="about-para">
+            The community trades options every day, and no screener on the market combined the filters
+            they needed: open interest, bid/ask spread, relative volume, and ATR in one place. The
+            client first tried Pine Script on TradingView, but Pine Script cannot pull options data
+            and cannot scan multiple stocks into a ranked table. It is a chart tool, not a screener.
+            The answer was a custom web app.
+        </p>
+
+        <h2 class="section-title" style="font-size:1.5rem; margin-top:40px;">Three modes, one focus</h2>
+        <ul class="timeline-list" style="margin-top:16px;">
+            <li>Large Cap ($10B+): deep options chains, tight spreads, consistent fills. Built for reliability.</li>
+            <li>Mid Cap ($2B-$10B): faster movers with bigger percentage gains, so the filters are stricter to protect
+                against thin liquidity.</li>
+            <li>Mag 7 (NVDA, TSLA, AAPL, META, AMZN, MSFT, GOOGL): these names do not need filtering, they need
+                ranking. Sort by ATR and the screener tells you which one is worth trading today.</li>
+        </ul>
+
+        <h2 class="section-title" style="font-size:1.5rem; margin-top:40px;">The filters that matter</h2>
+        <ul class="timeline-list" style="margin-top:16px;">
+            <li>ATR: how much the stock moves per day. If the stock does not move, the premium does not move.</li>
+            <li>Bid/Ask spread: the cost paid on every entry and exit. Tight spread means clean fills.</li>
+            <li>Relative volume: today's activity versus the daily average. Above 1.0 is the timing signal.</li>
+            <li>Open interest: enough open contracts to exit quickly when needed.</li>
+            <li>Price and volume: keeps results out of penny option territory and confirms active trading.</li>
+        </ul>
+
+        <h2 class="section-title" style="font-size:1.5rem; margin-top:40px;">Session-based presets</h2>
+        <p class="about-para">
+            Traders do not scan the same way at 9:30 AM as at 2:00 PM, so the screener ships with
+            presets built around the trading session. Morning Momentum catches confirmed unusual
+            activity in the first hour. Wide Net loosens thresholds on slow days. Sniper runs very
+            tight filters and returns one or two names, the single best trade of the day. Members
+            can export any scan as CSV or copy it as markdown for AI analysis.
+        </p>
+
+        <h2 class="section-title" style="font-size:1.5rem; margin-top:40px;">Honest lessons</h2>
+        <p class="about-para">
+            My first presets were too tight. The Mag 7 scan returned zero results on quiet days
+            because the relative volume threshold cut six of the seven stocks. The client caught it,
+            ran the numbers, and came back with better values. The developer sets the filters, the
+            trader knows the market. The second lesson was speed: pulling options data one stock at
+            a time took 36 minutes. Running requests in parallel cut it to under 6, which is what
+            makes the screener usable during the session, not just before it.
+        </p>
+
+        <h2 class="section-title" style="font-size:1.5rem; margin-top:40px;">The result</h2>
+        <p class="about-para">
+            A private, real-time options screener used by a paying trading community every market
+            day. It tracks 1,300+ stocks, refreshes options data every 15 minutes during market
+            hours, and gives members a clean ranked list of setups in seconds. The tool does one
+            thing well. That is enough.
+        </p>
+
+        <p class="about-para">
+            Want the full technical breakdown?
+            <a href="https://medium.com/@huzaifazahoor654" target="_blank" rel="noopener" class="inline-link">
+                Read the complete write-up on Medium</a>.
+        </p>
+
+        <div class="hero-actions" style="margin-top:32px;">
+            <a href="/stock-screener-development/" class="btn-secondary">Stock Screener Service</a>
+            <a href="/#contact" class="btn-primary">Build Yours</a>
+        </div>
+    </div>
+</section>
