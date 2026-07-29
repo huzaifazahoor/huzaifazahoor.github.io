@@ -1,0 +1,27 @@
+# Huzaifa Zahoor — Stock Market Developer & Data Engineer
+
+> Huzaifa Zahoor builds stock market software: screeners, scanners, trading bots, alerts, AI research tools, and ETL data pipelines. 60+ MVPs shipped for clients in the US, UK, Canada, Australia, and Saudi Arabia. Co-founder of Meyka AI (300K monthly readers). 5-star rated on Upwork and Fiverr.
+
+## Main
+
+- [Home](https://huzaifazahoor.online/): Overview of services, portfolio, experience, and client reviews.
+- [Portfolio](https://huzaifazahoor.online/#portfolio): Live stock screeners, scanners, bots, and dashboards built for real clients.
+- [Reviews](https://huzaifazahoor.online/#reviews): 40+ verified 5-star client reviews from Upwork and Fiverr.
+- [Contact](https://huzaifazahoor.online/#contact): Start a project. Replies within 24 hours.
+
+## Services
+
+- [Stock Screener Development](https://huzaifazahoor.online/stock-screener-development/): Custom screeners with technical and fundamental filters for any exchange.
+- [Trading Bot Development](https://huzaifazahoor.online/trading-bot-development/): Automated bots and alerts via Discord, WhatsApp, and Telegram.
+- [AI Fintech Chatbots](https://huzaifazahoor.online/ai-fintech-chatbot-development/): Stock research chatbots and sentiment tools built with GPT, Claude, and Gemini.
+- [Financial Data Pipelines](https://huzaifazahoor.online/financial-data-pipelines/): ETL pipelines using Apache Airflow, AWS Glue, and Lambda.
+
+## Case Studies
+
+- [Real-Time Options Screener](https://huzaifazahoor.online/case-study/larry-jones-options-screener/): Options screener tracking 1,300+ stocks, refreshed every 15 minutes.
+- [African Exchange Screener](https://huzaifazahoor.online/case-study/african-exchange-screener/): Full screener for the Nigerian Exchange with 145+ stocks and 20+ filters.
+- [900+ Stock Technical Screener](https://huzaifazahoor.online/case-study/technical-stock-screener-900-stocks/): Technical screener with sector filters, sentiment scores, and export tools.
+
+## Work With Me
+
+- [Hire a Stock Market Developer](https://huzaifazahoor.online/hire-stock-market-developer/): Overview of how to work with Huzaifa and what to expect.
