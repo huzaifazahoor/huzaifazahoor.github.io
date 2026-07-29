@@ -1,6 +1,6 @@
 # Huzaifa Zahoor — Stock Market Developer & Data Engineer
 
-> Huzaifa Zahoor builds stock market software: screeners, scanners, trading bots, alerts, AI research tools, and ETL data pipelines. 60+ MVPs shipped for clients in the US, UK, Canada, Australia, and Saudi Arabia. Co-founder of Meyka AI (300K monthly readers). 5-star rated on Upwork and Fiverr.
+> Huzaifa Zahoor builds stock market software: screeners, scanners, trading bots, alerts, AI research tools, and ETL data pipelines. 60+ MVPs shipped for clients in the US, UK, Canada, Australia, and Saudi Arabia. Co-founder of Meyka AI (300K monthly readers, built with zero ad spend). 5-star rated on Upwork and Fiverr with a 100% success rate. 5+ years focused only on stock market software.
 
 ## Main
 
@@ -16,12 +16,27 @@
 - [AI Fintech Chatbots](https://huzaifazahoor.online/ai-fintech-chatbot-development/): Stock research chatbots and sentiment tools built with GPT, Claude, and Gemini.
 - [Financial Data Pipelines](https://huzaifazahoor.online/financial-data-pipelines/): ETL pipelines using Apache Airflow, AWS Glue, and Lambda.
 
+## Top Projects
+
+- [Meyka — AI Stock Research Platform](https://meyka.com/): AI-powered stock research tool covering major global markets. Co-founded and built to 300K monthly readers.
+- [Topchor — NGX Stock Screener](https://topchor.com/): Full screener for the Nigerian Exchange. 145+ stocks, 20+ filters, technical indicators, watchlists, and daily signals.
+- [NEPSE Research](https://nepseresearch.com): Full stock market tool for Nepal with screener, candlestick pattern detection, and chart pattern analysis.
+- [Bravo Scan — US Market Screener](https://bravo-scan.com): US market screener with technical indicators, custom filters, and market insights.
+- Real-Time Options Screener: Private screener tracking 1,300+ stocks with ATR, spread, open interest, and relative volume filters. Updates every 15 minutes.
+
 ## Case Studies
 
 - [Real-Time Options Screener](https://huzaifazahoor.online/case-study/larry-jones-options-screener/): Options screener tracking 1,300+ stocks, refreshed every 15 minutes.
 - [African Exchange Screener](https://huzaifazahoor.online/case-study/african-exchange-screener/): Full screener for the Nigerian Exchange with 145+ stocks and 20+ filters.
 - [900+ Stock Technical Screener](https://huzaifazahoor.online/case-study/technical-stock-screener-900-stocks/): Technical screener with sector filters, sentiment scores, and export tools.
 
+## What Clients Say
+
+- "Best freelancer my company has used period. Huzaifa was a pleasure to work with, honest, loyal, punctual." — danny_kontos, Australia (Upwork)
+- "His technical depth, professionalism, and ability to execute a complex financial tool with precision were impressive. The final product is fast, intuitive, and built to scale." — ebizade10, United States (Fiverr)
+- "If I could give 10 stars I would! Seller was patient, attentive and accurately delivered exactly what I asked for my stock website project." — lblanks, United States (Fiverr)
+- "If you have a Python project, don't waste your time with others. He is your man!" — mayursangani, United Kingdom (Fiverr)
+
 ## Work With Me
 
-- [Hire a Stock Market Developer](https://huzaifazahoor.online/hire-stock-market-developer/): Overview of how to work with Huzaifa and what to expect.
+- [Hire a Stock Market Developer](https://huzaifazahoor.online/hire-stock-market-developer/): How to work with Huzaifa and what to expect.
