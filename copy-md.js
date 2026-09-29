@@ -85,14 +85,15 @@ function buildMarkdown() {
     return md.join("\n");
 }
 
-document.getElementById("copy-md-btn")?.addEventListener("click", async (e) => {
-    const btn = e.currentTarget;
-    try {
-        await navigator.clipboard.writeText(buildMarkdown());
+document.querySelectorAll(".copy-md-btn").forEach((btn) => {
+    btn.addEventListener("click", async () => {
         const old = btn.textContent;
-        btn.textContent = "Copied!";
+        try {
+            await navigator.clipboard.writeText(buildMarkdown());
+            btn.textContent = "Copied!";
+        } catch {
+            btn.textContent = "Copy failed";
+        }
         setTimeout(() => (btn.textContent = old), 1500);
-    } catch {
-        btn.textContent = "Copy failed";
-    }
+    });
 });

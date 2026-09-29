@@ -1,6 +1,6 @@
 # Huzaifa Zahoor — Stock Market Developer & Data Engineer
 
-> Huzaifa Zahoor builds stock market software: screeners, scanners, trading bots, alerts, AI research tools, and ETL data pipelines. 60+ MVPs shipped for clients in the US, UK, Canada, Australia, and Saudi Arabia. Co-founder of Meyka AI (300K monthly readers, built with zero ad spend). 5-star rated on Upwork and Fiverr with a 100% success rate. 5+ years focused only on stock market software.
+> Huzaifa Zahoor builds stock market software: screeners, scanners, trading bots, alerts, AI research tools, and ETL data pipelines. 60+ products shipped for clients in the US, UK, Canada, Australia, and Saudi Arabia. Former founding engineer at Meyka AI, which he built from scratch to 800K peak monthly users with zero ad spend. 5-star rated on Upwork and Fiverr with a 100% success rate. 6 years building stock market software.
 
 ## Main
 
@@ -18,7 +18,7 @@
 
 ## Top Projects
 
-- [Meyka — AI Stock Research Platform](https://meyka.com/): AI-powered stock research tool covering major global markets. Co-founded and built to 300K monthly readers.
+- [Meyka — AI Stock Research Platform](https://meyka.com/): AI stock research platform covering 60,000+ stocks and cryptos across 10 markets. Built from scratch as founding engineer, reaching 800K peak monthly users.
 - [Topchor — NGX Stock Screener](https://topchor.com/): Full screener for the Nigerian Exchange. 145+ stocks, 20+ filters, technical indicators, watchlists, and daily signals.
 - [NEPSE Research](https://nepseresearch.com): Full stock market tool for Nepal with screener, candlestick pattern detection, and chart pattern analysis.
 - [Bravo Scan — US Market Screener](https://bravo-scan.com): US market screener with technical indicators, custom filters, and market insights.

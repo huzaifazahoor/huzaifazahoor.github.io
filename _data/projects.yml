@@ -1,8 +1,14 @@
 - id: meyka
   title: "Meyka — AI Stock Research Platform"
-  desc: "An AI-powered stock research tool that helps investors make better decisions. Covers major global markets."
+  desc: "AI stock research platform covering 60,000+ stocks and cryptos across 10 markets. I built it from the first line of code to 800K peak monthly users."
   image: "portfolio_images/about_meyka.webp"
   link: "https://meyka.com/"
+
+- id: abbo-news-app
+  title: "ABBO News — AI Stock Tools for Investors"
+  desc: "AI stock tools for a US financial news platform, covering 10,000+ stocks. Includes an AI stock assistant, earnings and dividend calendars, insider and analyst trackers, and smart watchlists."
+  image: "portfolio_images/abbo-news.webp"
+  link: "https://app.abbonews.com/"
 
 - id: topchor
   title: "Topchor — NGX Stock Screener"
