@@ -10,6 +10,28 @@
   image: "portfolio_images/abbo-news.webp"
   link: "https://app.abbonews.com/"
 
+- id: valuation-screener
+  title: "Multi-Step Valuation Screener for US and ADR Stocks"
+  desc: "Valuation screener covering 5,500+ US and foreign stocks. Users write their own intrinsic value formulas and run them in chained steps, with Market Cap and EV matching the Yahoo Finance website."
+  image: "portfolio_images/valuation-screener-1.webp"
+  long_desc: "Built for a private US client to replace a buggy tool that mixed up Market Cap and Enterprise Value."
+  features:
+    - "Multi-step screening: pre-screen by price, volume, and market cap, then run custom formulas step by step, with a funnel showing what passed at each stage."
+    - "Safe formula engine with autocomplete, so users can type any valuation formula without breaking the app."
+    - "Correct Enterprise Value for every stock type: banks use market cap, and foreign ADRs like TSM and BABA get cash and debt converted to USD."
+    - "Coverage of S&P 100, 400, 500, 600, Nasdaq 100, Nasdaq Composite, full NYSE, and ADRs."
+    - "Earnings screener with a 30-day calendar, plus signals for top gainers, top losers, and most active."
+    - "Watchlists with notes, saved formula presets, and multi-column sorting."
+    - "Automated pipeline on Google Cloud: daily price updates, fundamentals refreshed right after each earnings report, and split handling."
+  images:
+    - "portfolio_images/valuation-screener-1.webp"
+    - "portfolio_images/valuation-screener-2.webp"
+    - "portfolio_images/valuation-screener-3.webp"
+    - "portfolio_images/valuation-screener-4.webp"
+    - "portfolio_images/valuation-screener-5.webp"
+    - "portfolio_images/valuation-screener-6.webp"
+    - "portfolio_images/valuation-screener-7.webp"
+
 - id: topchor
   title: "Topchor — NGX Stock Screener"
   desc: "A full stock screener for the Nigerian Exchange Group. Covers 145+ stocks with 20+ filters, technical indicators, watchlists, and daily market signals."

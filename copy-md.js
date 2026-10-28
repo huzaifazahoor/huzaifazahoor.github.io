@@ -1,3 +1,15 @@
+const ABOUT_ME = [
+    "\n## Contact",
+    "- **Name:** Huzaifa Zahoor",
+    "- **Website:** https://huzaifazahoor.online",
+    "- **Followers:** 12K+",
+    "- **Email:** huzaifazahoor654@gmail.com",
+    "- **LinkedIn:** https://www.linkedin.com/in/huzaifazahoor",
+    "- **GitHub:** https://github.com/huzaifazahoor",
+    "- **Medium:** https://medium.com/@huzaifazahoor654",
+    "- **Stack Overflow:** https://stackoverflow.com/users/7136640/huzaifa-zahoor",
+    "- **YouTube:** https://www.youtube.com/@huzaifazahoor654",
+];
 function buildMarkdown() {
     const md = [];
     const txt = (el) => (el ? el.textContent.trim().replace(/\s+/g, " ") : "");
@@ -12,6 +24,8 @@ function buildMarkdown() {
             md.push("- **" + txt(s.querySelector(".stat-num")) + "** " + txt(s.querySelector(".stat-label")));
         });
     }
+
+    md.push(...ABOUT_ME);
 
     // SUMMARY
     const sum = document.getElementById("summary");
