@@ -3,12 +3,20 @@
   desc: "AI stock research platform covering 60,000+ stocks and cryptos across 10 markets. I built it from the first line of code to 800K peak monthly users."
   image: "portfolio_images/about_meyka.webp"
   link: "https://meyka.com/"
+  follow: true
 
 - id: abbo-news-app
   title: "ABBO News — AI Stock Tools for Investors"
   desc: "AI stock tools for a US financial news platform, covering 10,000+ stocks. Includes an AI stock assistant, earnings and dividend calendars, insider and analyst trackers, and smart watchlists."
   image: "portfolio_images/abbo-news.webp"
   link: "https://app.abbonews.com/"
+
+- id: nutshell-crypto
+  title: "NutshellCrypto — Crypto News and Guides"
+  desc: "My own crypto news site with daily news, plain-English guides, and free tools like a DCA calculator. I run everything: WordPress, content, SEO, and backlinks."
+  image: "portfolio_images/nutshellcrypto.webp"
+  link: "https://nutshellcrypto.com/"
+  follow: true
 
 - id: valuation-screener
   title: "Multi-Step Valuation Screener for US and ADR Stocks"

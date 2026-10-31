@@ -1,0 +1,65 @@
+# _data/builds.yml
+- id: kafka-flink-crypto
+  title: "Real-Time Crypto Candles and Price Alerts"
+  desc: "Streams live Binance trades through Kafka into Flink SQL and PyFlink to build 1-minute candles and fire user price alerts, with exactly-once delivery and zero data lost in crash tests."
+  code: "https://github.com/huzaifazahoor/kafka-flink-crypto-pipeline"
+
+- id: graphql-kubernetes
+  title: "Stock GraphQL API on Kubernetes"
+  desc: "Django GraphQL stock API that auto scales from 2 to 6 pods, deploys with zero failed requests, and cuts 13 queries to 2, monitored in Prometheus and Grafana."
+  code: "https://github.com/huzaifazahoor/django-graphql-kubernetes"
+
+- id: terraform-aws
+  title: "Python App on AWS with Terraform"
+  desc: "32 AWS resources in Terraform that run any Python API on ECS Fargate with RDS behind a load balancer, load tested with k6 and removed with one command."
+  code: "https://github.com/huzaifazahoor/terraform-ecs-fargate-rds"
+
+- id: pine-ta
+  title: "pine_ta — Technical Indicators Library"
+  desc: "Python library for stock technical indicators in pandas and NumPy, inspired by Pine Script, with no TA-Lib needed. Published on PyPI."
+  code: "https://github.com/huzaifazahoor/pine_ta"
+
+- id: fuel-route-planner
+  title: "Fuel Route Planner API"
+  desc: "Plans US truck trips with the cheapest fuel stops across 6,000+ stations. A grid index cuts millions of distance checks, with one routing API call per trip."
+  code: "https://github.com/huzaifazahoor/fuel-route-planner-api"
+
+- id: postgres-gist-500m
+  title: "GiST Spatial Index on 500M Points"
+  desc: "Postgres GiST indexing on 500 million geo points, with before and after benchmarks for box, circle, polygon, and nearest neighbor search."
+  code: "https://github.com/huzaifazahoor/postgres-gist-500m"
+
+- id: mini-kafka
+  title: "Mini Kafka in Python"
+  desc: "Kafka's core built from scratch: append-only log, broker, partitions by stock symbol, offsets, and replay."
+  code: "https://github.com/huzaifazahoor/mini-kafka"
+
+- id: mini-whatsapp
+  title: "Mini WhatsApp"
+  desc: "Real-time chat over WebSockets with typing, read receipts, and presence, plus a Redis queue that delivers missed messages when users come back online."
+  code: "https://github.com/huzaifazahoor/mini-whatsapp"
+
+- id: idempotency-key-demo
+  title: "Idempotency Keys for Payments"
+  desc: "Shows why Redis alone lets double payments through under fast clicks, and how a database unique key stops them every time."
+  code: "https://github.com/huzaifazahoor/idempotency-key-demo"
+
+- id: postgres-replica-lab
+  title: "Postgres Read Replica Lab"
+  desc: "Leader and replica in Docker, async vs sync replication tested under failure, and an index that took a query from 747 ms to 0.08 ms."
+  code: "https://github.com/huzaifazahoor/postgres-read-replica-lab"
+
+- id: mona-bot
+  title: "Mona Bot — CLI Stock Research Assistant"
+  desc: "Local command line assistant that pulls Yahoo Finance data and gives AI analysis on any stock."
+  code: "https://github.com/huzaifazahoor/mona-bot"
+
+- id: stock-price-forecast
+  title: "Stock Price Forecast"
+  desc: "Stock price forecasting with Prophet, the same approach behind Meyka's forecasts."
+  code: "https://github.com/huzaifazahoor/stock-price-forecast"
+
+- id: linkedin-post-copier
+  title: "LinkedIn Post Copier Extension"
+  desc: "Chrome and Edge extension that copies your LinkedIn posts as clean text with their reactions, comments, and impressions, ready to paste into any LLM."
+  code: "https://github.com/huzaifazahoor/linkedin-post-copier-extension"

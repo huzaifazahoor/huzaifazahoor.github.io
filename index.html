@@ -223,12 +223,10 @@ extra_js:
                     <h3 class="portfolio-card-title">{{ project.title }}</h3>
                     <p class="portfolio-card-desc">{{ project.desc }}</p>
                     {% if project.link %}
-                    {% if project.link contains 'meyka.com' %}
-                    <a href="{{ project.link }}" target="_blank" rel="noopener" class="portfolio-card-link">View
-                        Live →</a>
+                    {% if project.follow %}
+                    <a href="{{ project.link }}" target="_blank" rel="noopener" class="portfolio-card-link">View Live →</a>
                     {% else %}
-                    <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer nofollow"
-                        class="portfolio-card-link">View Live →</a>
+                    <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer nofollow" class="portfolio-card-link">View Live →</a>
                     {% endif %}
                     {% else %}
                     <button class="portfolio-card-link open-popup-btn" data-id="{{ project.id }}">View Details
@@ -266,6 +264,32 @@ extra_js:
                 </div>
             </div>
             {% endunless %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- ENGINEERING BUILDS -->
+<section id="builds" class="section" aria-labelledby="builds-heading">
+    <div class="section-inner">
+        <div class="section-header">
+            <span class="section-tag">How I Learn</span>
+            <h2 id="builds-heading" class="section-title">Engineering Builds</h2>
+            <p class="section-desc">I read about a system, then build it to see how it really works. All code is on GitHub.</p>
+        </div>
+        <div class="portfolio-grid">
+            {% for build in site.data.builds %}
+            <article class="portfolio-card fade-up">
+                {% if build.image %}
+                <img loading="lazy" src="{{ build.image }}" alt="{{ build.title }}" width="400" height="190" />
+                {% endif %}
+                <div class="portfolio-card-body">
+                    <h3 class="portfolio-card-title">{{ build.title }}</h3>
+                    <p class="portfolio-card-desc">{{ build.desc }}</p>
+                    <a href="{{ build.code }}" target="_blank" rel="noopener" class="portfolio-card-link">
+                        <i class="fab fa-github"></i> View Code →</a>
+                </div>
+            </article>
             {% endfor %}
         </div>
     </div>

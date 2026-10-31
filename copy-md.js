@@ -71,6 +71,18 @@ function buildMarkdown() {
         });
     }
 
+    // BUILDS
+    const builds = document.getElementById("builds");
+    if (builds) {
+        md.push("\n## Engineering Builds");
+        builds.querySelectorAll(".portfolio-card").forEach((card) => {
+            md.push("\n### " + txt(card.querySelector(".portfolio-card-title")));
+            md.push(txt(card.querySelector(".portfolio-card-desc")));
+            const link = card.querySelector("a.portfolio-card-link");
+            if (link) md.push("Code: " + link.href);
+        });
+    }
+
     // EXPERIENCE
     const exp = document.getElementById("experience");
     if (exp) {
